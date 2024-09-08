@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cookie - Expert Electric</title>
+        <link rel="icon" type="images/png" href="/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+
+        <!-- Font Awesome CDN for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!---box icons link--->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <!---remix icon link--->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+        
+        <!---google font link--->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!---Google reCAPTCHA-->
+        <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>   
+      
+     <style>
+          /* Cookie Policy Section Styling */
+        .cookie-policy {
+            margin-top: 150px;
+            background-color: #fff; 
+            padding: 40px 20px; 
+            width: 100%; 
+        }
+
+        .cookie-policy-container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background-color: #fff;
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        .cookie-policy h2 {
+            font-size: 2rem; 
+            margin-bottom: 20px; 
+            color: #333; 
+        }
+
+        .cookie-policy h3 {
+            font-size: 1.5rem; 
+            margin-top: 20px; 
+            margin-bottom: 10px; 
+            color: #555; 
+        }
+
+        .cookie-policy p {
+            font-size: 1rem; 
+            line-height: 1.6; 
+            color: #666; 
+            margin-bottom: 20px; 
+        }
+
+        .cookie-policy ul {
+            margin: 0; 
+            padding: 0 20px; 
+        }
+
+        .cookie-policy ul li {
+            margin-bottom: 10px; 
+            font-size: 1rem; 
+            color: #666; 
+        }
+
+        .cookie-policy a {
+            color: #76ABAE; 
+            text-decoration: none; 
+        }
+
+        .cookie-policy a:hover {
+            text-decoration: underline; 
+        }
+
+        .policy-divider {
+                height: 2px;
+                width: 100%;
+                background-color: #76ABAE; 
+                margin: 30px 0;
+                transition: transform 0.5s ease, margin-top 0.5s ease; 
+            }
+
+     </style>
+
+    </head>
+
+    <body>
+
+        <!---header--->
+        
+        <div class="top-header">
+            <p class="top-header-text">We're ready to help.</p>
+            <a href="#" class="top-header-button" id="bookNowww">BOOK NOW</a>
+        </div>        
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" class="logo"><img src="images/eelogo4.png"></a>
+                </div>
+                <nav class="menu">
+                    <div class="head">
+                       
+                    </div>
+                    <ul>
+                        <li><a href="/" class="active">Home</a></li>
+                        <li><a href="/about/">About us</a></li>
+                        <li class="dropdown">
+                            <a href="/services/">Our Services</a>
+                            <i class="fa solid fa-chevron-down"></i>
+                            <ul class="sub-menu">
+                                <li><a href="/services/#domestic-installation"><span>Domestic Installation</span></a></li>
+                                <li><a href="/services/#commercial-installation"><span>Commercial Installation</span></a></li>
+                                <li><a href="/services/#lighting"><span>Lighting</span></a></li>
+                                <li><a href="/services/#appliance-installation"><span>Appliance Installation</span></a></li>
+                                <li><a href="/services/#smoke-heat"><span>Smoke & Heat Alarms</span></a></li>
+                                <li><a href="/services/#waste"><span>Electrical Waste</span></a></li>
+                                <li><a href="/services/#certification"><span>Electrical Certification</span></a></li>
+                                <li><a href="/services/#security"><span>Security</span></a></li>
+                                <li><a href="/services/#renewable"><span>Renewable Energy</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/contact/">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">             
+                        <a href="tel:=447972677064"><i class="ri-phone-fill"></i>07972677064</a>
+                    </div>
+                    <button type="button" class="open-menu-btn">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </button>
+                </div>
+            </div>
+        </header>    
+        
+                 <!-- Modal forms -->        
+                 <div class="booking-form-modal" id="bookingFormModal">
+                    <div class="booking-form-container">
+                        <div class="banner bbook">
+                            <h1>Make a Booking</h1>
+                            <h3 class="call">Simply call and we'll book you in now</h3>
+                            <h1 class="call1">0797 2677 064</h1>
+                            <span class="close-form" id="closeForm">&times;</span>
+                        </div>
+                        <div class="form-content">
+                            <h3 class="ca">Can't call us? You can still request a booking by filling out the form below.</h3>
+                            <form id="bookingForm" onsubmit="sendMail(event, 'bookingForm', 'bookingResponseMessage')">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="bookingName">Name *</label>
+                                        <input type="text" id="bookingName" placeholder="Name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bookingContactNumber">Contact Number *</label>
+                                        <input type="text" id="bookingContactNumber" placeholder="Contact Number" name="contactNumber" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="bookingEmail">Email Address *</label>
+                                        <input type="email" id="bookingEmail" placeholder="Email Address" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bookingPostCode">Post Code *</label>
+                                        <input type="text" id="bookingPostCode" placeholder="Post Code" name="postCode" required>
+                                    </div>
+                                </div>
+                                <div class="form-row form-group-full">
+                                    <div class="form-group">
+                                        <label for="bookingService">Service *</label>
+                                        <div class="dropdown-container">
+                                            <select id="bookingService" name="service" required>
+                                                <option value="" disabled selected>Select a service</option>
+                                                <option value="electrical repair">Electrical Repair</option>
+                                                <option value="upgrades">Upgrades</option>
+                                                <option value="domestic installation">Domestic Installation</option>
+                                                <option value="commercial installation">Commercial Installation</option>
+                                                <option value="lighting">Lighting</option>
+                                                <option value="appliance installation">Appliance Installation</option>
+                                                <option value="smoke & heat alarms">Smoke & Heat Alarms</option>
+                                                <option value="electrical waste">Electrical Waste</option>
+                                                <option value="electrical certification">Electrical Certification</option>
+                                                <option value="security">Security</option>
+                                                <option value="renewables">Renewable Energy</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row form-group-full">
+                                    <div class="form-group">
+                                        <label for="bookingIssueDetails">Details About the Issue</label>
+                                        <textarea id="bookingIssueDetails" rows="4" placeholder="Details About the Issue" name="issueDetails"></textarea>
+                                    </div>
+                                </div>
+                                <div class="contact-form-row contact-form-group-full">
+                                    <div class="contact-form-group">
+                                        <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required>
+                                        <label id="bookingAgreeTerms">By using this contact form you agree to the Expert Electric Ltd Terms & Conditions, and use of your details in accordance with our Privacy Policy</label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" id="sendBookingRequest">Submit Booking Request</button>
+                                <div id="bookingResponseMessage" class="response-message"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-form-modal" id="quoteFormModal">
+                    <div class="booking-form-container">
+                        <div class="banner" id="bbook">
+                            <h1>Request a Quote</h1>
+                            <h3 class="call">Simply fill out the form below and we'll get back to you</h3>
+                            <h1 class="call1">0797 2677 064</h1>
+                            <span class="close-form" id="closeQuoteForm">&times;</span>
+                        </div>
+                        <div class="form-content">
+                            <h3 class="ca">Can't call us? You can still request a quote by filling out the form below.</h3>
+                            <form id="quoteForm" onsubmit="sendMail(event, 'quoteForm', 'quoteResponseMessage')">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="quoteName">Name *</label>
+                                        <input type="text" id="quoteName" placeholder="Name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="quoteContactNumber">Contact Number *</label>
+                                        <input type="text" id="quoteContactNumber" placeholder="Contact Number" name="contactNumber" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="quoteEmail">Email Address *</label>
+                                        <input type="email" id="quoteEmail" placeholder="Email Address" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="quotePostCode">Post Code *</label>
+                                        <input type="text" id="quotePostCode" placeholder="Post Code" name="postCode" required>
+                                    </div>
+                                </div>
+                                <div class="form-row form-group-full">
+                                    <div class="form-group">
+                                        <label for="quoteService">Service *</label>
+                                        <div class="dropdown-container">
+                                            <select id="quoteService" name="service" required>
+                                                <option value="" disabled selected>Select a service</option>
+                                                <option value="electrical repair">Electrical Repair</option>
+                                                <option value="upgrades">Upgrades</option>
+                                                <option value="domestic installation">Domestic Installation</option>
+                                                <option value="commercial installation">Commercial Installation</option>
+                                                <option value="lighting">Lighting</option>
+                                                <option value="appliance installation">Appliance Installation</option>
+                                                <option value="smoke & heat alarms">Smoke & Heat Alarms</option>
+                                                <option value="electrical waste">Electrical Waste</option>
+                                                <option value="electrical certification">Electrical Certification</option>
+                                                <option value="security">Security</option>
+                                                <option value="renewables">Renewable Energy</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row form-group-full">
+                                    <div class="form-group">
+                                        <label for="quoteIssueDetails">Details About the Issue</label>
+                                        <textarea id="quoteIssueDetails" rows="4" placeholder="Details About the Issue" name="issueDetails"></textarea>
+                                    </div>
+                                </div>
+                                <div class="contact-form-row contact-form-group-full">
+                                    <div class="contact-form-group">
+                                        <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required>
+                                        <label id="quoteAgreeTerms">By using this contact form you agree to the Expert Electric Ltd Terms & Conditions, and use of your details in accordance with our Privacy Policy</label>
+                                    </div>
+                                </div>
+
+                                <button type="submit" id="sendQuoteRequest">Submit Quote Request</button>
+                                <div id="quoteResponseMessage" class="response-message"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                try {
+                    emailjs.init("UQIAN58pk32SA6Sp5");
+                    console.log("EmailJS initialized successfully.");
+                } catch (e) {
+                    console.error("Failed to initialize EmailJS:", e);
+                }
+        
+                });
+        
+                    document.addEventListener('DOMContentLoaded', function() {
+                try {
+                    emailjs.init("UQIAN58pk32SA6Sp5");
+                    console.log("EmailJS initialized successfully.");
+                } catch (e) {
+                    console.error("Failed to initialize EmailJS:", e);
+                }
+                });
+        
+                function sendMail(event, formId, responseMessageId) {
+                    event.preventDefault();
+        
+                    var form = document.getElementById(formId);
+                    if (!form) {
+                        console.error("Form with ID " + formId + " not found.");
+                        return;
+                    }
+        
+                    var params = {};
+        
+                    try {
+                        if (formId === 'contactForm') {
+                            params = {
+                                name: form.querySelector('input[id="contactName"]')?.value || '',
+                                number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
+                                email: form.querySelector('input[id="contactEmail"]')?.value || '',
+                                postcode: form.querySelector('input[id="contactPostCode"]')?.value || '',
+                                service: form.querySelector('select[id="contactService"]')?.value || '',
+                                details: form.querySelector('textarea[id="contactIssueDetails"]')?.value || ''
+                            };
+                        } else if (formId === 'bookingForm') {
+                            params = {
+                                name: form.querySelector('input[id="bookingName"]')?.value || '',
+                                number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
+                                email: form.querySelector('input[id="bookingEmail"]')?.value || '',
+                                postcode: form.querySelector('input[id="bookingPostCode"]')?.value || '',
+                                service: form.querySelector('select[id="bookingService"]')?.value || '',
+                                details: form.querySelector('textarea[id="bookingIssueDetails"]')?.value || ''
+                            };
+                        } else if (formId === 'quoteForm') {
+                            params = {
+                                name: form.querySelector('input[id="quoteName"]')?.value || '',
+                                number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
+                                email: form.querySelector('input[id="quoteEmail"]')?.value || '',
+                                postcode: form.querySelector('input[id="quotePostCode"]')?.value || '',
+                                service: form.querySelector('select[id="quoteService"]')?.value || '',
+                                details: form.querySelector('textarea[id="quoteIssueDetails"]')?.value || ''
+                            };
+                        } else {
+                            console.error("Form ID " + formId + " does not match any known forms.");
+                            return;
+                        }
+        
+                        console.log("Form Data: ", params); // Debugging log
+        
+                        emailjs.send("service_el2g39x", "template_nkryzl2", params)
+                            .then(res => {
+                                // Clear form fields
+                                if (form instanceof HTMLFormElement) {
+                                    form.reset();
+                                    // Uncheck the checkbox explicitly if present
+                                    let checkbox = form.querySelector("input[type='checkbox']");
+                                    if (checkbox) checkbox.checked = false;
+                                }
+        
+                                // Redirect to success page
+                                window.location.href = 'index-success.html';
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                                // Redirect to failure page
+                                window.location.href = 'index-failure.html';
+                            });
+                    } catch (error) {
+                        console.error("Error processing form data:", error);
+                    }
+                }  
+            </script>
+
+        <!-- Cookie Policy Section -->
+        <section class="cookie-policy">
+            <div class="cookie-policy-container">
+                <h2>Cookie Policy</h2>
+                <p>To make our site work properly and provide you with the best possible experience, we sometimes place small data files called cookies on your device. These cookies help us understand how you interact with our site, personalize your experience, and enhance our services.</p>
+
+                <div class="policy-divider"></div> <!-- Divider -->
+
+                <h3>1. Introduction</h3>
+                <p>Expert Electric uses cookies to help personalize your online experience. By using our website, you agree to our use of cookies in accordance with this Cookie Policy. Please note that our site may contain links to third-party websites, which are not governed by this policy. We recommend reviewing the privacy policies of any linked websites before providing any personal data.</p>
+
+                <div class="policy-divider"></div> <!-- Divider -->
+
+                <h3>2. What is a Cookie?</h3>
+                <p>A cookie is a small text file that is saved on your computer or mobile device when you visit our site. This file enables our website to remember your preferences (such as language, font size, and other display settings) over time, so you don’t have to re-enter them each time you visit or navigate between pages.</p>
+
+                <div class="policy-divider"></div> <!-- Divider -->
+
+                <h3>3. What Do We Collect?</h3>
+                <p>Our cookies do not specifically identify you as an individual. Instead, they collect information such as:</p>
+                <ul>
+                    <li>Device type (e.g., mobile, computer, laptop, tablet)</li>
+                    <li>Operating system</li>
+                    <li>IP address</li>
+                    <li>Browser information (e.g., type, language, and history)</li>
+                    <li>Access times</li>
+                    <li>Settings</li>
+                    <li>Referring website addresses</li>
+                    <li>Other device-related data to provide our services as described in this policy</li>
+                    <li>Location information (we may receive your generic location, such as city or neighborhood)</li>
+                </ul>
+                <p>This information is used internally for website traffic analysis, helping us understand the geographical distribution of our visitors and the technology they use to access our site. We do not connect this information with the personal data you provide if you register with us as a customer.</p>
+
+                <div class="policy-divider"></div> <!-- Divider -->
+
+                <h3>4. How are Cookies Used?</h3>
+                <p>We use cookies for various purposes, including:</p>
+                <ul>
+                    <li><strong>Essential website functionality:</strong> Ensuring our website functions properly and delivers the services you expect.</li>
+                    <li><strong>Enhancing website performance:</strong> Improving the speed and efficiency of our site to provide a better user experience.</li>
+                    <li><strong>Website traffic analysis:</strong> Using tools like Google Analytics to gather insights about how our site is used, which helps us improve it.</li>
+                    <li><strong>Logging users' actions:</strong> Keeping track of user interactions for internal analysis.</li>
+                    <li><strong>User identification:</strong> Remembering your login details and preferences for future visits.</li>
+                    <li><strong>Behavioural advertising:</strong> Displaying targeted ads based on your browsing habits and preferences.</li>
+                </ul>
+                <p>We use Google Analytics to analyze the usage of our website. Google Analytics generates statistical and other information about website use by means of cookies, which are stored on users' computers. The information generated relating to our website is used to create reports about the use of the website. Google will store this information. Google's privacy policy is available at: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.</p>
+
+                <div class="policy-divider"></div> <!-- Divider -->
+
+                <h3>5. How to Control Cookies</h3>
+                <p>You have the ability to block or restrict the use of cookies through your browser settings. For more information on cookies, their usage, and how to manage them, you can visit <a href="https://www.aboutcookies.org.uk" target="_blank">www.aboutcookies.org.uk</a>. However, please note that blocking cookies may impact the functionality of our website, and you may need to manually adjust some preferences each time you visit our site.</p>
+            </div>
+        </section>
+
+
+        
+        <!-- Footer Section -->
+        <section class="footer">
+            <div class="footer-section">
+                <a href="/" class="logo"><img src="/images/eelogo4.png" alt="Logo"></a>
+                <ul>
+                    <h3>Page Links</h3>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About us</a></li>
+                    <li><a href="/services/">Our Services</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/contact/">Contact us</a></li>
+                </ul>
+                <ul class="quick">
+                    <h3>Quick Links</h3>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/cookie/">Cookie Policy</a></li>
+                    <li><a href="/termsandconditions/">Terms & Conditions</a></li>
+                </ul>
+                <div class="footer-buttons">
+                    <button class="footer-btn" id="requestquote">Request a quote</button>
+                    <button class="footer-btn" id="requestbook">Book Now</button>
+                </div>
+            </div>
+            <div class="social-icon">
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="sv"><?xml version="1.0" ?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="20px" height="20px" viewBox="0 0 24 24" style="fill: #fff;" xml:space="preserve"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+                <a href="#"><i class="ri-discuss-fill"></i></a>
+            </div>
+            <div class="footer-p">
+                <p>© Expert Electric</p>
+            </div>
+        </section>
+        
+
+         <!---Emailjs SDK-->
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+         <!---scroll reveal--->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!---js link--->
+        <script src="/index.js"></script>
+    </body>
+</html>

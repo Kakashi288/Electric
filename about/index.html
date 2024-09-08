@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About - Expert Electric</title>
+        <link rel="icon" type="images/png" href="/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+
+        <!-- Font Awesome CDN for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!---box icons link--->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <!---remix icon link--->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+        
+        <!---google font link--->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+         <!---Google reCAPTCHA-->
+         <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    </head>
+
+    <body>
+        <!---Header Section--->
+        <div class="top-header">
+            <p class="top-header-text">We're ready to help.</p>
+            <a href="#" class="top-header-button" id="bookNowww">BOOK NOW</a>
+        </div>   
+        
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" class="logo"><img src="/images/eelogo4.png"></a>
+                </div>
+                <nav class="menu">
+                    <div class="head">
+                       
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/" class="active">About us</a></li>
+                        <li class="dropdown">
+                            <a href="/services/">Our Services</a>
+                            <i class="fa solid fa-chevron-down"></i>
+                            <ul class="sub-menu">
+                                <li><a href="/services/#domestic-installation"><span>Domestic Installation</span></a></li>
+                                <li><a href="/services/#commercial-installation"><span>Commercial Installation</span></a></li>
+                                <li><a href="/services/#lighting"><span>Lighting</span></a></li>
+                                <li><a href="/services/#appliance-installation"><span>Appliance Installation</span></a></li>
+                                <li><a href="/services/#smoke-heat"><span>Smoke & Heat Alarms</span></a></li>
+                                <li><a href="/services/#waste"><span>Electrical Waste</span></a></li>
+                                <li><a href="/services/#certification"><span>Electrical Certification</span></a></li>
+                                <li><a href="/services/#security"><span>Security</span></a></li>
+                                <li><a href="/services/#renewable"><span>Renewable Energy</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/contact/">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">             
+                        <a href="tel:=447972677064"><i class="ri-phone-fill"></i>07972677064</a>
+                    </div>
+                    <button type="button" class="open-menu-btn">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+         <!-- Cookie Consent Banner -->
+         <div id="cookieConsent" class="cookie-consent-banner">
+            <div class="cookie-consent-container">
+                <p>This website uses cookies to ensure you get the best online experience on our website, by using them to analyse site traffic, personalise content to you and serve targeted ads for the latest offers. <a href="./index-privacy.html" class="link-button">Learn more</a></p>
+                <button id="cookieSettingsabout" class="cookie-consent-button">Cookie Settings</button>
+                <button id="acceptCookies" class="cookie-consent-button">Accept All</button>
+            </div>
+        </div>
+
+                <!-- Cookie Settings Modal -->
+                <div id="cookieSettingsModal" class="cookie-settings-modal">
+                    <div class="cookie-settings-content">
+                        <div class="cookie-settings-header">
+                            <h2>Our use of cookies</h2>
+                            <span class="cookie-settings-close">&times;</span>
+                        </div>
+                        <div class="cookie-settings-body">
+                            <p>This website uses cookies to ensure you get the best experience on our website. To read more about the cookies we use, please read our <a href="./index-cookie.html" class="link-button">cookie policy</a>.</p>
+                            <div class="divider"></div>
+                
+                            <h2>Necessary cookies</h2>
+                            <p>Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.</p>
+                            <div class="divider"></div>
+                
+                            <!-- Wrapping the entire h2 in a clickable div -->
+                            <div id="optionalCookiesHeader" class="header-container">
+                                <h2>Optional cookies <i class="ri-arrow-down-s-line icon"></i></h2>
+                            </div>
+                            <div class="divider"></div>
+                
+                            <div id="optionalCookies" class="cookie-settings-details">
+                                <p>Optional cookies are used for various purposes, including analytics and advertising. You can choose to enable or disable these cookies.</p>
+                
+                                <!-- Analytics Cookies Toggle -->
+                                <div class="cookie-setting-item">
+                                    <h3>Analytics cookies</h3>
+                                    <p>We’d like to set Google Analytics cookies to help us to improve our website by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone.</p>
+                                    <label class="switch">
+                                        <input type="checkbox" id="analyticsCookiesToggle" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id="toggleStatus" class="toggle-status">On</span>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                
+                            <!-- Save and Accept Button -->
+                            <button id="acceptCookies" class="cookie-consent-button savebtn">Save and Accept</button>
+                            <!-- <button id="saveAndAccept" class="cookie-consent-button">Save and Accept</button> -->
+                        </div>
+                    </div>
+                </div>
+                
+            
+        <!-- Modal forms -->        
+        <div class="booking-form-modal" id="bookingFormModal">
+            <div class="booking-form-container">
+                <div class="banner">
+                    <h1>Make a Booking</h1>
+                    <h3 class="call">Simply call and we'll book you in now</h3>
+                    <h1 class="call1">0797 2677 064</h1>
+                    <span class="close-form" id="closeForm">&times;</span>
+                </div>
+                <div class="form-content">
+                    <h3 class="ca">Can't call us? You can still request a booking by filling out the form below.</h3>
+                    <form id="bookingForm" onsubmit="sendMail(event, 'bookingForm', 'bookingResponseMessage')">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingName">Name *</label>
+                                <input type="text" id="bookingName" placeholder="Name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingContactNumber">Contact Number *</label>
+                                <input type="text" id="bookingContactNumber" placeholder="Contact Number" name="contactNumber" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingEmail">Email Address *</label>
+                                <input type="email" id="bookingEmail" placeholder="Email Address" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingPostCode">Post Code *</label>
+                                <input type="text" id="bookingPostCode" placeholder="Post Code" name="postCode" required>
+                            </div>
+                        </div>
+                        <div class="form-row form-group-full">
+                            <div class="form-group">
+                                <label for="bookingService">Service *</label>
+                                <div class="dropdown-container">
+                                    <select id="bookingService" name="service" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="electrical repair">Electrical Repair</option>
+                                        <option value="upgrades">Upgrades</option>
+                                        <option value="domestic installation">Domestic Installation</option>
+                                        <option value="commercial installation">Commercial Installation</option>
+                                        <option value="lighting">Lighting</option>
+                                        <option value="appliance installation">Appliance Installation</option>
+                                        <option value="smoke & heat alarms">Smoke & Heat Alarms</option>
+                                        <option value="electrical waste">Electrical Waste</option>
+                                        <option value="electrical certification">Electrical Certification</option>
+                                        <option value="security">Security</option>
+                                        <option value="renewables">Renewable Energy</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-group-full">
+                            <div class="form-group">
+                                <label for="bookingIssueDetails">Details About the Issue</label>
+                                <textarea id="bookingIssueDetails" rows="4" placeholder="Details About the Issue" name="issueDetails"></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-form-row contact-form-group-full">
+                            <div class="contact-form-group">
+                                <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required>
+                                <label id="bookingAgreeTerms">By using this contact form you agree to the Expert Electric Ltd Terms & Conditions, and use of your details in accordance with our Privacy Policy</label>
+                            </div>
+                        </div>
+                        <button type="submit" id="sendBookingRequest">Submit Booking Request</button>
+                        <div id="bookingResponseMessage" class="response-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="booking-form-modal" id="quoteFormModal">
+            <div class="booking-form-container">
+                <div class="banner">
+                    <h1>Request a Quote</h1>
+                    <h3 class="call">Simply fill out the form below and we'll get back to you</h3>
+                    <h1 class="call1">0797 2677 064</h1>
+                    <span class="close-form" id="closeQuoteForm">&times;</span>
+                </div>
+                <div class="form-content">
+                    <h3 class="ca">Can't call us? You can still request a quote by filling out the form below.</h3>
+                    <form id="quoteForm" onsubmit="sendMail(event, 'quoteForm', 'quoteResponseMessage')">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quoteName">Name *</label>
+                                <input type="text" id="quoteName" placeholder="Name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quoteContactNumber">Contact Number *</label>
+                                <input type="text" id="quoteContactNumber" placeholder="Contact Number" name="contactNumber" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quoteEmail">Email Address *</label>
+                                <input type="email" id="quoteEmail" placeholder="Email Address" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quotePostCode">Post Code *</label>
+                                <input type="text" id="quotePostCode" placeholder="Post Code" name="postCode" required>
+                            </div>
+                        </div>
+                        <div class="form-row form-group-full">
+                            <div class="form-group">
+                                <label for="quoteService">Service *</label>
+                                <div class="dropdown-container">
+                                    <select id="quoteService" name="service" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="electrical repair">Electrical Repair</option>
+                                        <option value="upgrades">Upgrades</option>
+                                        <option value="domestic installation">Domestic Installation</option>
+                                        <option value="commercial installation">Commercial Installation</option>
+                                        <option value="lighting">Lighting</option>
+                                        <option value="appliance installation">Appliance Installation</option>
+                                        <option value="smoke & heat alarms">Smoke & Heat Alarms</option>
+                                        <option value="electrical waste">Electrical Waste</option>
+                                        <option value="electrical certification">Electrical Certification</option>
+                                        <option value="security">Security</option>
+                                        <option value="renewables">Renewable Energy</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-group-full">
+                            <div class="form-group">
+                                <label for="quoteIssueDetails">Details About the Issue</label>
+                                <textarea id="quoteIssueDetails" rows="4" placeholder="Details About the Issue" name="issueDetails"></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-form-row contact-form-group-full">
+                            <div class="contact-form-group">
+                                <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required>
+                                <label id="quoteAgreeTerms">By using this contact form you agree to the Expert Electric Ltd Terms & Conditions, and use of your details in accordance with our Privacy Policy</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="sendQuoteRequest">Submit Quote Request</button>
+                        <div id="quoteResponseMessage" class="response-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            try {
+                emailjs.init("UQIAN58pk32SA6Sp5");
+                console.log("EmailJS initialized successfully.");
+            } catch (e) {
+                console.error("Failed to initialize EmailJS:", e);
+            }
+
+            });
+
+                document.addEventListener('DOMContentLoaded', function() {
+            try {
+                emailjs.init("UQIAN58pk32SA6Sp5");
+                console.log("EmailJS initialized successfully.");
+            } catch (e) {
+                console.error("Failed to initialize EmailJS:", e);
+            }
+            });
+
+            function sendMail(event, formId, responseMessageId) {
+                event.preventDefault();
+
+                var form = document.getElementById(formId);
+                if (!form) {
+                    console.error("Form with ID " + formId + " not found.");
+                    return;
+                }
+
+                var params = {};
+
+                try {
+                    if (formId === 'contactForm') {
+                        params = {
+                            name: form.querySelector('input[id="contactName"]')?.value || '',
+                            number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="contactEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="contactPostCode"]')?.value || '',
+                            service: form.querySelector('select[id="contactService"]')?.value || '',
+                            details: form.querySelector('textarea[id="contactIssueDetails"]')?.value || ''
+                        };
+                    } else if (formId === 'bookingForm') {
+                        params = {
+                            name: form.querySelector('input[id="bookingName"]')?.value || '',
+                            number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="bookingEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="bookingPostCode"]')?.value || '',
+                            service: form.querySelector('select[id="bookingService"]')?.value || '',
+                            details: form.querySelector('textarea[id="bookingIssueDetails"]')?.value || ''
+                        };
+                    } else if (formId === 'quoteForm') {
+                        params = {
+                            name: form.querySelector('input[id="quoteName"]')?.value || '',
+                            number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="quoteEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="quotePostCode"]')?.value || '',
+                            service: form.querySelector('select[id="quoteService"]')?.value || '',
+                            details: form.querySelector('textarea[id="quoteIssueDetails"]')?.value || ''
+                        };
+                    } else {
+                        console.error("Form ID " + formId + " does not match any known forms.");
+                        return;
+                    }
+
+                    console.log("Form Data: ", params); // Debugging log
+
+                    emailjs.send("service_el2g39x", "template_nkryzl2", params)
+                        .then(res => {
+                            // Clear form fields
+                            if (form instanceof HTMLFormElement) {
+                                form.reset();
+                                // Uncheck the checkbox explicitly if present
+                                let checkbox = form.querySelector("input[type='checkbox']");
+                                if (checkbox) checkbox.checked = false;
+                            }
+
+                            // Redirect to success page
+                            window.location.href = 'index-success.html';
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                            // Redirect to failure page
+                            window.location.href = 'index-failure.html';
+                        });
+                } catch (error) {
+                    console.error("Error processing form data:", error);
+                }
+            }  
+        </script>
+            
+
+
+        <!--- About Us Banner Section--->
+        <section class="zero">
+            <div class="ban"></div>  
+            <div class="indentation-line-banner-about"></div>
+            <div class="banner-page">                                                 
+                <div class="bannerr-items">
+                    <div class="bannerr">             
+                        <h1 class="placeban">About Us</h1>
+                    </div>
+                </div>   
+            </div>   
+        </section>
+        
+        <!---About Us Section--->
+        <section class="firstt">
+                <div class="aboutt">
+                    <div class="box a1">
+                        <h2 class="title-about">We're one of London's <br>most reliable and trusted electrical companies</h2>
+                        <p class="paragraph">Welcome to Expert Electric, where we keep your world bright and powered with top-notch electrical services. <br><br>
+                            We offer a full range of electrical services to suit your every need, from moving a
+                            socket-outlet to entire rewiring solutions. Our dedicated engineers are fully qualified and ready to fulfil your electrical requirements.</br><br>
+                            At Expert Electric, we have an excellent reputation as a professional, electrical company. Our goal is to make sure that your 
+                            electrical project is completed to your absolute satisfaction.
+                        </p>
+                        <a href="/projects/" class="btn-1 ghost-1" tabindex="0">View our projects</a>
+                    </div>
+                    <div class="box-container">
+                        <div class="boxoverr a2"></div> 
+                        <div class="boxoverr2 a3"></div>  
+                    </div>
+                </div>    
+        </section>
+
+
+        <!---About Content Section--->
+        <section class="first-0">
+            <div class="about-indentation-line-2"></div>
+            <div class="first-container">
+                <div class="container-image a3"></div>
+                <div class="container-content a4">
+                    <h2 class="content-title-about">Bright ideas for every project</h2>
+                    <p class="content-paragraph">
+                        Whether it's a new installation or a complex repair, we bring innovation and expertise to every job. <br><br>
+                        We provide expert electrical services that are tailored to your needs. Book now or call us today to get more information, request a quote, or send 
+                        us a message through the contact page. We are happy to answer all queries in regards to our company and your future project.
+                    </p>
+                    <a href="/contact/" class="btn-1 ghost-1 conb" tabindex="0">Contact us</a>
+                </div>
+            </div>
+        </section>
+
+        <!---About Services Section--->
+        <section class="about-services">
+            <div class="services-container">
+                <div class="services-content a5">
+                    <h2 class="content-title-services">Our services include but are not limited to;</h2>
+                    <div class="content-list-services">
+                        <div class="service-item">
+                            <i class="fa-solid fa-minus service-icon"></i>
+                            <p class="service-text">Domestic Electrics</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-minus service-icon"></i>
+                            <p class="service-text">Commericial Electrics</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-minus service-icon"></i>
+                            <p class="service-text">Repair</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-minus service-icon"></i>
+                            <p class="service-text">Maintenance</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-minus service-icon"></i>
+                            <p class="service-text">Consultation</p>
+                        </div>
+                        <div class="service-item">
+                            <i class="fa-solid fa-minus service-icon"></i>
+                            <p class="service-text">Upgrade</p>
+                        </div>
+                    </div>
+                    <a href="/services/" class="btn-1 ghost-1 conb" tabindex="0">View our services</a>
+                </div>
+                <div class="services-image a6"></div>
+            </div>
+        </section>
+        
+        
+        
+        <!---Why Choose Us Section--->
+        <section class="choose-us-section">
+            <div class="choose-us-container-main">
+                <h1 class="choose-us-title-about a7">Why Choose Us</h1>
+                <div class="choose-us-container">
+                    <div class="choose-us-item a3">
+                        <div class="choose-us-icon-container">
+                            <i class="fas fa-check-circle choose-us-icon"></i>
+                        </div>
+                        <div class="choose-us-content">
+                            <h1 class="choose-us-heading">Quality Assurance</h1>
+                            <p class="choose-us-text">We are committed to providing the highest quality products and services, ensuring customer satisfaction at every step.</p>
+                        </div>
+                    </div>
+                    <div class="choose-us-item a3">
+                        <div class="choose-us-icon-container">
+                            <i class="fas fa-tags choose-us-icon"></i>
+                        </div>
+                        <div class="choose-us-content">
+                            <h1 class="choose-us-heading">Competitive Pricing</h1>
+                            <p class="choose-us-text">We offer competitive pricing without compromising on quality, providing the best value for your investment.</p>
+                        </div>
+                    </div>
+                    <div class="choose-us-item a3">
+                        <div class="choose-us-icon-container">
+                            <i class="fas fa-trophy choose-us-icon"></i>
+                        </div>
+                        <div class="choose-us-content">
+                            <h1 class="choose-us-heading">Customer Satisfaction</h1>
+                            <p class="choose-us-text">We have a long history of successful projects and satisfied clients who can attest to our reliability and excellence.</p>
+                        </div>
+                    </div>
+                    <div class="choose-us-item a3">
+                        <div class="choose-us-icon-container">
+                            <i class="fas fa-users choose-us-icon"></i>
+                        </div>
+                        <div class="choose-us-content">
+                            <h1 class="choose-us-heading">Certified Professionals</h1>
+                            <p class="choose-us-text">Our team consists of highly skilled and experienced professionals who are experts in their respective fields.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons-container a7">
+                    <button class="footer-btn cony" id="quote">Request a quote</button>
+                    <button class="footer-btn cony" id="booknow">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!--- Process Section--->
+        <section class="process-section">
+            <div class="section-title process a7">
+                <h1>Our process</h1>
+            </div>
+            <div class="process-card-container a3">
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fa-regular fa-message"></i>
+                    </div>
+                    <h1>Tell us the details</h1>
+                    <div class="process-card-line"></div>
+                    <p>Reach out to us using whichever contact method suits you, and tell us about your project.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </div>
+                    <h1>We provide a quote</h1>
+                    <div class="process-card-line"></div>
+                    <p>We will go over the details and provide you with a no obligation quote to have the work carried out.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h1>Receive a start date</h1>
+                    <div class="process-card-line"></div>
+                    <p>If you're satisfied with the quote, we will contact you to arrange a date for us to complete the work.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!---Footer Section--->
+        <section class="footer">
+            <div class="footer-section">
+                <a href="/" class="logo"><img src="/images/eelogo4.png" alt="Logo"></a>
+                <ul>
+                    <h3>Page Links</h3>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About us</a></li>
+                    <li><a href="/services/">Our Services</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/contact/">Contact us</a></li>
+                </ul>
+                <ul class="quick">
+                    <h3>Quick Links</h3>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/cookie/">Cookie Policy</a></li>
+                    <li><a href="/termsandconditions/">Terms & Conditions</a></li>
+                </ul>
+                <div class="footer-buttons">
+                    <button class="footer-btn" id="requestquote">Request a quote</button>
+                    <button class="footer-btn" id="requestbook">Book Now</button>
+                </div>
+            </div>
+            <div class="social-icon">
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="sv"><?xml version="1.0" ?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="20px" height="20px" viewBox="0 0 24 24" style="fill: #fff;" xml:space="preserve"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+                <a href="#"><i class="ri-discuss-fill"></i></a>
+            </div>
+            <div class="footer-p">
+                <p>© Expert Electric</p>
+            </div>
+        </section>
+
+
+        <!---Emailjs SDK-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+         <!---scroll reveal--->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!---js link--->
+        <script src="/index.js"></script>
+        <script src="/indexabout.js"></script>
+    </body>
+</html>

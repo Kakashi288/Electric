@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+        <title>Home - Expert Electric</title>
+        <link rel="icon" type="images/png" href="/images/favicon.png">
+
+        <!-- Font Awesome CDN for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!---box icons link--->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <!---remix icon link--->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+        
+        <!---google font link--->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+         <!---Google reCAPTCHA-->
+         <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+        
+    </head>
+
+    <body>
+
+        <!---header--->
+        
+        <div class="top-header">
+            <p class="top-header-text">We're ready to help.</p>
+            <a href="#" class="top-header-button" id="bookNowww">BOOK NOW</a>
+        </div> 
+
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" class="logo"><img src="/images/eelogo4.png"></a>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About us</a></li>
+                        <li class="dropdown">
+                            <a href="/services/">Our Services</a>
+                            <i class="fa solid fa-chevron-down"></i>
+                            <ul class="sub-menu">
+                                <li><a href="/services/#domestic-installation"><span>Domestic Installation</span></a></li>
+                                <li><a href="/services/#commercial-installation"><span>Commercial Installation</span></a></li>
+                                <li><a href="/services/#lighting"><span>Lighting</span></a></li>
+                                <li><a href="/services/#appliance-installation"><span>Appliance Installation</span></a></li>
+                                <li><a href="/services/#smoke-heat"><span>Smoke & Heat Alarms</span></a></li>
+                                <li><a href="/services/#waste"><span>Electrical Waste</span></a></li>
+                                <li><a href="/services/#certification"><span>Electrical Certification</span></a></li>
+                                <li><a href="/services/#security"><span>Security</span></a></li>
+                                <li><a href="/services/#renewable"><span>Renewable Energy</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/contact/">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">             
+                        <a href="tel:=447972677064"><i class="ri-phone-fill"></i>07972677064</a>
+                    </div>
+                    <button type="button" class="open-menu-btn">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="chatbot-widget">
+            <div class="chatbot-chatbox">
+                <div class="chatbox-header">
+                    <div class="chatbox-avatar">
+                        <img src="./images/eelogo.png" alt="Chatbot Avatar">
+                    </div>
+                    <div class="chatbox-info">
+                        <div class="chatbot-name">Expert Electric</div>
+                        <div class="chatbot-status">Typically replies within a day</div>
+                    </div>
+                    <button class="chatbox-close-btn" onclick="toggleChatbox()">×</button>
+                </div>
+    
+                <div class="chatbox-body" id="chatboxBody">
+                    <div class="loading-indicator">
+                        <span></span><span></span><span></span>
+                    </div>
+                    
+                </div>
+    
+                <div class="chatbox-footer">
+                    <a href="https://wa.me/4407972677064" target="_blank">
+                        <span class="whatsapp-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                <path d="M30.19.031a31.753 31.753 0 0 0-26.735 46.12L.085 62.509A1.235 1.235 0 0 0 1.58 63.96l16.029-3.8A31.744 31.744 0 1 0 30.19.031zM49.316 49.31A24.871 24.871 0 0 1 20.68 54l-2.232-1.112-9.828 2.326 2.069-10.042-1.1-2.154a24.874 24.874 0 0 1 4.578-28.857A24.854 24.854 0 0 1 49.316 49.31zm0 0" fill="#fff"></path>
+                                <path d="M47.147 38.619L41 36.854a2.292 2.292 0 0 0-2.267.6l-1.5 1.531a2.239 2.239 0 0 1-2.435.514C31.883 38.32 25.765 32.88 24.2 30.16a2.239 2.239 0 0 1 .177-2.483l1.312-1.7a2.292 2.292 0 0 0 .283-2.328L23.388 17.8a2.293 2.293 0 0 0-3.58-.82c-1.716 1.451-3.752 3.657-4 6.1-.436 4.308 1.411 9.738 8.4 16.258 8.071 7.534 14.534 8.528 18.743 7.509 2.387-.578 4.294-2.9 5.5-4.793a2.293 2.293 0 0 0-1.3-3.436z" fill="#fff"></path>
+                            </svg>
+                        </span>
+                        Start Chat
+                    </a>
+                </div>
+            </div>
+    
+            <div class="chatbot-floating-btn" onclick="toggleChatbox()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                    <path d="M30.19.031a31.753 31.753 0 0 0-26.735 46.12L.085 62.509A1.235 1.235 0 0 0 1.58 63.96l16.029-3.8A31.744 31.744 0 1 0 30.19.031zM49.316 49.31A24.871 24.871 0 0 1 20.68 54l-2.232-1.112-9.828 2.326 2.069-10.042-1.1-2.154a24.874 24.874 0 0 1 4.578-28.857A24.854 24.854 0 0 1 49.316 49.31zm0 0" fill="#25d366"></path>
+                    <path d="M47.147 38.619L41 36.854a2.292 2.292 0 0 0-2.267.6l-1.5 1.531a2.239 2.239 0 0 1-2.435.514C31.883 38.32 25.765 32.88 24.2 30.16a2.239 2.239 0 0 1 .177-2.483l1.312-1.7a2.292 2.292 0 0 0 .283-2.328L23.388 17.8a2.293 2.293 0 0 0-3.58-.82c-1.716 1.451-3.752 3.657-4 6.1-.436 4.308 1.411 9.738 8.4 16.258 8.071 7.534 14.534 8.528 18.743 7.509 2.387-.578 4.294-2.9 5.5-4.793a2.293 2.293 0 0 0-1.3-3.436z" fill="#25d366"></path>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Cookie Consent Banner -->
+        <div id="cookieConsent" class="cookie-consent-banner">
+            <div class="cookie-consent-container">
+                <p>This website uses cookies to ensure you get the best online experience on our website, by using them to analyse site traffic, personalise content to you and serve targeted ads for the latest offers. <a href="./index-privacy.html" class="link-button">Learn more</a></p>
+                <button id="cookieSettingshome" class="cookie-consent-button">Cookie Settings</button>
+                <button id="acceptCookies" class="cookie-consent-button">Accept All</button>
+            </div>
+        </div>
+
+                <!-- Cookie Settings Modal -->
+                <div id="cookieSettingsModal" class="cookie-settings-modal">
+                    <div class="cookie-settings-content">
+                        <div class="cookie-settings-header">
+                            <h2>Our use of cookies</h2>
+                            <span class="cookie-settings-close">&times;</span>
+                        </div>
+                        <div class="cookie-settings-body">
+                            <p>This website uses cookies to ensure you get the best experience on our website. To read more about the cookies we use, please read our <a href="./index-cookie.html" class="link-button">cookie policy</a>.</p>
+                            <div class="divider"></div>
+                
+                            <h2>Necessary cookies</h2>
+                            <p>Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.</p>
+                            <div class="divider"></div>
+                
+                            <!-- Wrapping the entire h2 in a clickable div -->
+                            <div id="optionalCookiesHeader" class="header-container">
+                                <h2>Optional cookies <i class="ri-arrow-down-s-line icon"></i></h2>
+                            </div>
+                            <div class="divider"></div>
+                
+                            <div id="optionalCookies" class="cookie-settings-details">
+                                <p>Optional cookies are used for various purposes, including analytics and advertising. You can choose to enable or disable these cookies.</p>
+                
+                                <!-- Analytics Cookies Toggle -->
+                                <div class="cookie-setting-item">
+                                    <h3>Analytics cookies</h3>
+                                    <p>We’d like to set Google Analytics cookies to help us to improve our website by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone.</p>
+                                    <label class="switch">
+                                        <input type="checkbox" id="analyticsCookiesToggle" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id="toggleStatus" class="toggle-status">On</span>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                
+                            <!-- Save and Accept Button -->
+                            <button id="acceptCookies" class="cookie-consent-button savebtn">Save and Accept</button>
+                            <!-- <button id="saveAndAccept" class="cookie-consent-button">Save and Accept</button> -->
+                        </div>
+                    </div>
+                </div>
+                
+
+        
+        
+
+        <section class="zero">
+            <div class="ban"></div>  
+            <div class="indentation-line"></div>
+            <div class="banner-motion">
+                <div class="banner-content">
+                    <p>
+                        10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>
+                        10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>10% off electrical upgrades<span class="dot"></span>
+                    </p>
+                </div>
+            </div>  
+            <div class="banner-page">                                                 
+                <div class="banner-items">
+                    <div class="bannerr">
+                        <h3>Welcome to Expert Electric</h3>
+                        <h1>Premium Electrical Services</h1>
+                        <h3 class="wel">Let's chat</h3>
+                    </div>
+                    <div class="booking-section">
+                        <div class="item1" id="item1">
+                            <div id="displaySelection" class="display-selection">I need help with...</div>
+                            <i class="ri-arrow-down-s-line icon"></i>
+                            <i class="fa-solid fa-magnifying-glass icon-m"></i>
+                            <div class="dropdown-menu" id="dropdownMenu">
+                                <div class="dropdown-item1">I need help with...</div>
+                                <div class="dropdown-item">Electrical Repair</div>
+                                <div class="dropdown-item">Upgrades</div>
+                                <div class="dropdown-item">Domestic Installation</div>
+                                <div class="dropdown-item">Commercial Installation</div>
+                                <div class="dropdown-item">Lighting</div>
+                                <div class="dropdown-item">Appliance Installation</div>
+                                <div class="dropdown-item">Smoke & Heat Alarms</div>
+                                <div class="dropdown-item">Electrical Waste</div>
+                                <div class="dropdown-item">Electrical Certification</div>
+                                <div class="dropdown-item">Security</div>
+                                <div class="dropdown-item">Renewable Energy</div>
+                            </div>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="item2" id="item2">
+                            <i class="fa-solid fa-bullseye icon-b"></i>
+                            <input type="text" placeholder="Enter postcode" id="input2">
+                            <button class="bookNow" id="booknow">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+             <!-- Modal forms -->        
+            <div class="booking-form-modal" id="bookingFormModal">
+                <div class="booking-form-container">
+                    <div class="banner bbook">
+                        <h1>Make a Booking</h1>
+                        <h3 class="call">Simply call and we'll book you in now</h3>
+                        <h1 class="call1">0797 2677 064</h1>
+                        <span class="close-form" id="closeForm">&times;</span>
+                    </div>
+                    <div class="form-content">
+                        <h3 class="ca">Can't call us? You can still request a booking by filling out the form below.</h3>
+                        <form id="bookingForm" onsubmit="sendMail(event, 'bookingForm', 'bookingResponseMessage')">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bookingName">Name *</label>
+                                    <input type="text" id="bookingName" placeholder="Name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bookingContactNumber">Contact Number *</label>
+                                    <input type="text" id="bookingContactNumber" placeholder="Contact Number" name="contactNumber" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bookingEmail">Email Address *</label>
+                                    <input type="email" id="bookingEmail" placeholder="Email Address" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bookingPostCode">Post Code *</label>
+                                    <input type="text" id="bookingPostCode" placeholder="Post Code" name="postCode" required>
+                                </div>
+                            </div>
+                            <div class="form-row form-group-full">
+                                <div class="form-group">
+                                    <label for="bookingService">Service *</label>
+                                    <div class="dropdown-container">
+                                        <select id="bookingService" name="service" required>
+                                            <option value="" disabled selected>Select a service</option>
+                                            <option value="electrical repair">Electrical Repair</option>
+                                            <option value="upgrades">Upgrades</option>
+                                            <option value="domestic installation">Domestic Installation</option>
+                                            <option value="commercial installation">Commercial Installation</option>
+                                            <option value="lighting">Lighting</option>
+                                            <option value="appliance installation">Appliance Installation</option>
+                                            <option value="smoke & heat alarms">Smoke & Heat Alarms</option>
+                                            <option value="electrical waste">Electrical Waste</option>
+                                            <option value="electrical certification">Electrical Certification</option>
+                                            <option value="security">Security</option>
+                                            <option value="renewables">Renewable Energy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row form-group-full">
+                                <div class="form-group">
+                                    <label for="bookingIssueDetails">Details About the Issue</label>
+                                    <textarea id="bookingIssueDetails" rows="4" placeholder="Details About the Issue" name="issueDetails"></textarea>
+                                </div>
+                            </div>
+                            <div class="contact-form-row contact-form-group-full">
+                                <div class="contact-form-group">
+                                    <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required>
+                                    <label id="bookingAgreeTerms">By using this contact form you agree to the Expert Electric Ltd Terms & Conditions, and use of your details in accordance with our Privacy Policy</label>
+                                </div>
+                            </div>
+                            <button type="submit" id="sendBookingRequest">Submit Booking Request</button>
+                            <div id="bookingResponseMessage" class="response-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="booking-form-modal" id="quoteFormModal">
+                <div class="booking-form-container">
+                    <div class="banner" id="bbook">
+                        <h1>Request a Quote</h1>
+                        <h3 class="call">Simply fill out the form below and we'll get back to you</h3>
+                        <h1 class="call1">0797 2677 064</h1>
+                        <span class="close-form" id="closeQuoteForm">&times;</span>
+                    </div>
+                    <div class="form-content">
+                        <h3 class="ca">Can't call us? You can still request a quote by filling out the form below.</h3>
+                        <form id="quoteForm" onsubmit="sendMail(event, 'quoteForm', 'quoteResponseMessage')">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="quoteName">Name *</label>
+                                    <input type="text" id="quoteName" placeholder="Name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="quoteContactNumber">Contact Number *</label>
+                                    <input type="text" id="quoteContactNumber" placeholder="Contact Number" name="contactNumber" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="quoteEmail">Email Address *</label>
+                                    <input type="email" id="quoteEmail" placeholder="Email Address" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="quotePostCode">Post Code *</label>
+                                    <input type="text" id="quotePostCode" placeholder="Post Code" name="postCode" required>
+                                </div>
+                            </div>
+                            <div class="form-row form-group-full">
+                                <div class="form-group">
+                                    <label for="quoteService">Service *</label>
+                                    <div class="dropdown-container">
+                                        <select id="quoteService" name="service" required>
+                                            <option value="" disabled selected>Select a service</option>
+                                            <option value="electrical repair">Electrical Repair</option>
+                                            <option value="upgrades">Upgrades</option>
+                                            <option value="domestic installation">Domestic Installation</option>
+                                            <option value="commercial installation">Commercial Installation</option>
+                                            <option value="lighting">Lighting</option>
+                                            <option value="appliance installation">Appliance Installation</option>
+                                            <option value="smoke & heat alarms">Smoke & Heat Alarms</option>
+                                            <option value="electrical waste">Electrical Waste</option>
+                                            <option value="electrical certification">Electrical Certification</option>
+                                            <option value="security">Security</option>
+                                            <option value="renewables">Renewable Energy</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row form-group-full">
+                                <div class="form-group">
+                                    <label for="quoteIssueDetails">Details About the Issue</label>
+                                    <textarea id="quoteIssueDetails" rows="4" placeholder="Details About the Issue" name="issueDetails"></textarea>
+                                </div>
+                            </div>
+                            <div class="contact-form-row contact-form-group-full">
+                                <div class="contact-form-group">
+                                    <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required>
+                                    <label id="quoteAgreeTerms">By using this contact form you agree to the Expert Electric Ltd Terms & Conditions, and use of your details in accordance with our Privacy Policy</label>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="sendQuoteRequest">Submit Quote Request</button>
+                            <div id="quoteResponseMessage" class="response-message"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            try {
+                emailjs.init("UQIAN58pk32SA6Sp5");
+                console.log("EmailJS initialized successfully.");
+            } catch (e) {
+                console.error("Failed to initialize EmailJS:", e);
+            }
+
+            });
+
+                document.addEventListener('DOMContentLoaded', function() {
+            try {
+                emailjs.init("UQIAN58pk32SA6Sp5");
+                console.log("EmailJS initialized successfully.");
+            } catch (e) {
+                console.error("Failed to initialize EmailJS:", e);
+            }
+            });
+
+            function sendMail(event, formId, responseMessageId) {
+                event.preventDefault();
+
+                var form = document.getElementById(formId);
+                if (!form) {
+                    console.error("Form with ID " + formId + " not found.");
+                    return;
+                }
+
+                var params = {};
+
+                try {
+                    if (formId === 'contactForm') {
+                        params = {
+                            name: form.querySelector('input[id="contactName"]')?.value || '',
+                            number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="contactEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="contactPostCode"]')?.value || '',
+                            service: form.querySelector('select[id="contactService"]')?.value || '',
+                            details: form.querySelector('textarea[id="contactIssueDetails"]')?.value || ''
+                        };
+                    } else if (formId === 'bookingForm') {
+                        params = {
+                            name: form.querySelector('input[id="bookingName"]')?.value || '',
+                            number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="bookingEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="bookingPostCode"]')?.value || '',
+                            service: form.querySelector('select[id="bookingService"]')?.value || '',
+                            details: form.querySelector('textarea[id="bookingIssueDetails"]')?.value || ''
+                        };
+                    } else if (formId === 'quoteForm') {
+                        params = {
+                            name: form.querySelector('input[id="quoteName"]')?.value || '',
+                            number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="quoteEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="quotePostCode"]')?.value || '',
+                            service: form.querySelector('select[id="quoteService"]')?.value || '',
+                            details: form.querySelector('textarea[id="quoteIssueDetails"]')?.value || ''
+                        };
+                    } else {
+                        console.error("Form ID " + formId + " does not match any known forms.");
+                        return;
+                    }
+
+                    console.log("Form Data: ", params); // Debugging log
+
+                    emailjs.send("service_el2g39x", "template_nkryzl2", params)
+                        .then(res => {
+                            // Clear form fields
+                            if (form instanceof HTMLFormElement) {
+                                form.reset();
+                                // Uncheck the checkbox explicitly if present
+                                let checkbox = form.querySelector("input[type='checkbox']");
+                                if (checkbox) checkbox.checked = false;
+                            }
+
+                            // Redirect to success page
+                            window.location.href = 'index-success.html';
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                            // Redirect to failure page
+                            window.location.href = 'index-failure.html';
+                        });
+                } catch (error) {
+                    console.error("Error processing form data:", error);
+                }
+            }  
+        </script>
+        
+        <!-- About Section -->
+        <section class="first">
+            <div class="about">
+                <div class="box">
+                    <h2 class="title-about">Light up your life with confidence, with expertise you can trust</h2>
+                    <p class="paragraph">
+                        Experience unmatched quality and service with Expert Electric — your go-to experts for all electrical needs.
+                        <br>
+                        <br>
+                        With years of experience and a commitment to excellence, we provide electrical services that keep 
+                        your home and business running smoothly. Discover reliable, cost-effective electrical services tailored to meet your unique needs.
+                    </p>
+                    <div class="bullet-content">
+                        <div class="icon-text">
+                            <div class="icon-circle"><i class="fa-solid fa-circle-chevron-right"></i></div>
+                            <p>Installation</p>
+                        </div>
+                        <div class="icon-text">
+                            <div class="icon-circle"><i class="fa-solid fa-circle-chevron-right"></i></div>
+                            <p>One-off repairs</p>
+                        </div>
+                        <div class="icon-text">
+                            <div class="icon-circle"><i class="fa-solid fa-circle-chevron-right"></i></div>
+                            <p>Emergency call-out</p>
+                        </div>
+                        <div class="icon-text">
+                            <div class="icon-circle"><i class="fa-solid fa-circle-chevron-right"></i></div>
+                            <p>Upgrades</p>
+                        </div>
+                    </div>
+                    <a href="#Request a quote" class="btn-1 ghost-1" id="quote" tabindex="0">Request a quote</a>
+                </div>
+                <div class="booking-form-modal" id="quoteFormModal">
+                    <div class="booking-form-container">
+                        <div class="banner">
+                            <h1>Request a Quote</h1>
+                            <h3 class="call">Simply fill out the form below and we'll get back to you</h3>
+                            <h1 class="call1">0797 2677 064</h1>
+                            <span class="close-form" id="closeQuoteForm">&times;</span>
+                        </div>
+                        <div class="form-content">
+                            <h3 class="ca">Can't call us? You can still request a quote by filling out the form below.</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="quoteName">Name *</label>
+                                    <input type="text" id="quoteName" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="quoteContactNumber">Contact Number *</label>
+                                    <input type="text" id="quoteContactNumber" placeholder="Contact Number">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="quoteEmail">Email Address *</label>
+                                    <input type="email" id="quoteEmail" placeholder="Email Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="quotePostCode">Post Code *</label>
+                                    <input type="text" id="quotePostCode" placeholder="Post Code">
+                                </div>
+                            </div>
+                            <div class="form-row form-group-full">
+                                <div class="form-group">
+                                    <label for="quoteService">Service *</label>
+                                    <div class="dropdown-container">
+                                    <select id="quoteService">
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="electricalRepair">Electrical Repair</option>
+                                        <option value="installation">Installation</option>
+                                        <option value="upgrades">Upgrades</option>
+                                        <option value="lighting">Lighting</option>
+                                        <option value="power">Power</option>
+                                        <option value="appliances">Appliances</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row form-group-full">
+                                <div class="form-group">
+                                    <label for="quoteIssueDetails">Description</label>
+                                    <textarea id="quoteIssueDetails" rows="4" placeholder="Describe what you would like done"></textarea>
+                                </div>
+                            </div>
+                            <button id="sendQuoteRequest">Submit Quote Request</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-container">
+                    <div class="boxover"></div> 
+                    <div class="boxover2"></div>  
+                    <div class="boxover3"></div>  
+                </div>
+            </div>    
+        </section>
+        
+
+        <!-- First Information Section -->       
+        <section class="first-0">
+            <div class="first-2">
+                <div class="first-image"></div>
+                <div class="first-content">
+                    <div class="icon-text">
+                        <div class="icon-circle"><i class="fa-solid fa-circle-check"></i></div>
+                        <p>Professional</p>
+                    </div>
+                    <div class="icon-text">
+                        <div class="icon-circle"><i class="fa-solid fa-circle-check"></i></div>
+                        <p>Reliable</p>
+                    </div>
+                    <div class="icon-text">
+                        <div class="icon-circle"><i class="fa-solid fa-circle-check"></i></div>
+                        <p>Expert</p>
+                    </div>
+                    <div class="icon-text">
+                        <div class="icon-circle"><i class="fa-solid fa-circle-check"></i></div>
+                        <p>Certified</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horizontal Banner Content Section -->
+        <section class="bannerrr">
+            <div class="bannerrr-content">
+                <h3>"Expert Electric get things done. Your trusted electrical partner"</h3>
+            </div>
+            <button class="bookNoww" id="bookNoww">Book Now</button>
+        </section>
+
+        <!-- Horizontal Banner Section -->
+        <section class="horizontal">
+            <img src="/images/Nic.jpg">
+            <img src="/images/City.jpg">
+            <img src="/images/Part.jpg" class="part">
+            <img src="/images/Registered.jpg" class="register">
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+            <div class="section-title i1">
+                <h1>Our Services</h1>
+            </div>
+            <div class="card-transition i3">
+                <div class="card">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    
+                    <h1>Domestic Installation</h1>
+                    <p>Our domestic installation services</p>
+                    <a href="/services/#domestic-installation" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-building"></i>
+                    <h1>Commercial Installation</h1>
+                    <p>Our commercial installation services</p>
+                    <a href="/services/#commercial-installation" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <h1>Lighting</h1>
+                    <p>Complete lighting solutions</p>
+                    <a href="/services/#lighting" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="ri-tools-line"></i>
+                    <h1>Appliance Installation</h1>
+                    <p>Peace of mind, appliance installation service </p>
+                    <a href="/services/#appliance-installation" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-burn"></i>
+                    <h1>Smoke & Heat Alarms</h1>
+                    <p>Solution for dwellings and compliancy for rent / HMO purposes</p>
+                    <a href="/services/#smoke-heat" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-tablet-alt"></i>
+                    <h1>Electrical Waste</h1>
+                    <p>Recycle or donate electrical goods that are no longer in use</p>
+                    <a href="/services/#waste" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <h1>Electrical Certification</h1>
+                    <p>Certifiy your premises</p>
+                    <a href="/services/#certification" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="ri-shield-check-line"></i>
+                    <h1>Security</h1>
+                    <p>Comprehensive security solutions</p>
+                    <a href="/services/#security" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+                <div class="card">
+                    <i class="ri-earth-line"></i>
+                    <h1>Renewable Energy</h1>
+                    <p>Power up with renewable energy</p>
+                    <a href="/services/#renewable" class="readbtn ghost" tabindex="0">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Portfolio Section -->
+        <section class="projects">
+            <div class="project-Img">
+                <div class="img4">
+                    <img src="./images/img4.jpg" alt="Electrical one">
+                </div>
+                <div class="img5">
+                    <img src="./images/img5.jpg" alt="Electrical two">
+                </div>
+                <div class="img6">
+                    <img src="./images/img6.jpg" alt="Electrical three">
+                </div>
+                <div class="img7">
+                    <img src="./images/img7.jpg" alt="Electrical four">
+                </div>
+            </div>
+            <div class="Portfolio-tag">
+                <h2>Recent Projects</h2>
+                <p>Projects come with their own unique requirements and challenges. Tell us what you want to do, and we will devise a solution for you.</p>
+                <a href="/projects/" class="bttttn ghost" tabindex="0">Portfolio</a>
+            </div>      
+         </section>
+
+        <!-- Carousel Section -->
+        <section class="fourth">
+            <div class="fourth-1">
+                <div class="section-title i4">
+                    <h1>What our customers say</h1>
+                </div>
+                <div class="carousel i2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h1>"New consumer unit"</h1>
+                            <p>I contaced expert electric through their website, and was then scheduled in 
+                                to have the work done. I was impressed at how easy and efficient the process was,
+                                after completing the work the electrician spent time explaining the new consumer unit
+                                and it's functions. The service was beyond what I had hoped for.
+                            </p>
+                            <h2>Alice | Windsor</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h1>"Lighting fault on ground floor"</h1>
+                            <p>I contacted expert electric through a friend's recommendation. 
+                                The electricians spent some time understanding where the fault originated from.
+                                They kept me informed and carried out the fix in a professional manner.
+                                I paid only what they had quoted me, with no hidden charges. The information was transparent
+                                and their service was exceptional. I would highly recommend their service and will use them 
+                                in future.
+                            </p>
+                            <h2>Angela | Camberley</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h1>"Additional socket-outlets added to existing circuit"</h1>
+                            <p>The electricians sent to complete this work, were polite, friendly and professional. They kept us informed when the 
+                                power would need to be switched off, and when safe to use again. Work was completed to a high standard. 
+                            </p>
+                            <h2>Jonny | London</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h1>"Outdoor garden lighting"</h1>
+                            <p>After seeing the outdoor garden lighting at my friend's place. I contacted expert electric
+                                to advise on the design and type of outdoor garden lighting. Their knowledge and expertise 
+                                was critical for us to create the lighting ambience we required for our garden.
+                                Friendly and professional with the team going above and beyond by installing IP rated outdoor socket-outlets, for 
+                                electrical equipment use in the garden.
+                            </p>
+                            <h2>Paul | Reading</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h1>"First class service"</h1>
+                            <p>I was impressed with the entire process, from initially contacting
+                                expert electric to being scheduled in for my house rewire, the electricians were
+                                punctual everyday and provided a faultless service, cleaning up before commissioning the new
+                                wiring system and explaining the aspects of the new fusebox. Highly recommend their service.
+                            </p>
+                            <h2>Ricardo | Islington</h2>
+                        </div>
+                    </div>
+                    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+                    <div class="carousel-indicators">
+                        <input type="radio" name="indicator" onclick="currentSlide(1)" checked>
+                        <input type="radio" name="indicator" onclick="currentSlide(2)">
+                        <input type="radio" name="indicator" onclick="currentSlide(3)">
+                        <input type="radio" name="indicator" onclick="currentSlide(4)">
+                        <input type="radio" name="indicator" onclick="currentSlide(5)">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="faq-wrapper">
+                <div class="section-title i5">
+                    <h1 class="faq">FAQ</h1>
+                </div>
+                <div class="faq-container i6">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What locations do you cover?</h3>
+                            <div class="icon-container">
+                                <i class="ri-add-line toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Central & Greater London. Arrangements can be made for projects that are beyond this radius and which require further travel.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How often should I test my smoke Alarms?</h3>
+                            <div class="icon-container">
+                                <i class="ri-add-line toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The 18th Edition wiring regulations suggests that both smoke and heat alarms should be tested monthly. Most smoke and heat alarms have a duration of 10 years before they should be replaced. 
+                                The expiry label should be located on the outer shell of the unit or on the alarm head. Most smoke alarms use a 9v battery, if this needs replacing the alarm will randomly beep, indicating 
+                                a change of battery is required.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>My lights have stopped working, what should I do?</h3>
+                            <div class="icon-container">
+                                <i class="ri-add-line toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Check to see if a single light has gone off or multiple light points. It could be a case of changing the light bulb or low-voltage transformer if there are downlights.
+                                Assess the circuit breaker and RCD within the fuse board to see whether they have tripped. If they have tripped there is a fault. Another circuit in the fuse board could have also tripped the RCD. Try flicking 
+                            switches on the lighting circuit in the opposite direction and see if the circuit breaker switches on at the fuse board. If problem persists Expert Electric recommend calling an electrician.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>My RCD has tripped and won't reset, what should I do?</h3>
+                            <div class="icon-container">
+                                <i class="ri-add-line toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p> An RCD (Residual Current Device) gives additional protection to more than one circuit/breaker. When an RCD has tripped you will notice more than one circuit would have stopped working.
+                                Expert Electric recommend that all circuit breakers on the RCD side that have tripped are switched off. You can then reset the RCD. Turn each of the circuits on, until the RCD has tripped once more, this will
+                                indicate to you the faulty circuit. Call for an Electrician to carry out fault finding on the circuit.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What should I do if my power goes out?</h3>
+                            <div class="icon-container">
+                                <i class="ri-add-line toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Expert Electric recommend calling an electrician if the power outage is specific to your home or if there are signs of electrical damage or faults. An electrician can help identify 
+                                and fix problems such as faulty wiring, a blown fuse, or a tripped circuit breaker. If you have an older home with outdated electrical systems, it might be prone to failures. An electrician 
+                                can assess and upgrade your system to improve safety and reliability. For widespread power outages, report the issue to your electricity provider first.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Why do my lights flicker?</h3>
+                            <div class="icon-container">
+                                <i class="ri-add-line toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lights can flicker due to various reasons, including a loose bulb or fixture, a faulty light switch, or a mismatch between dimmer switches 
+                                and bulbs. Voltage fluctuations from large appliances, overloaded circuits, or faulty wiring can also cause flickering. Additionally, issues with the consumer
+                                unit, such as a faulty circuit breaker, and external problems with the utility service can be culprits. If troubleshooting these common causes doesn't resolve the issue,
+                                Expert Electric recommend consulting a professional electrician to ensure your electrical system's safety and functionality.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How often should I have an electrical inspection done?</h3>
+                            <div class="icon-container">
+                                <i class="ri-add-line toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Factors such as a change of occupancy, insurance purposes, a new property purchased or simply a new inspection for a previous expired report, 
+                                can be reasons to request an electrical installation Condition Report. If you have a previous report, the date of next inspection should
+                                be shown on page 2 of this report. BS7671 also recommends certain time intervals for electrical installation conditions that are dependent 
+                                on the type of installation or premises the report is for.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How can I save energy and reduce my electric bill?</h3>
+                            <div class="icon-container">
+                                <i class="ri-add-line toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>To save energy and reduce your electric bill, upgrade to energy-efficient appliances and LED lighting. Improve home insulation, seal leaks, and install energy-efficient windows to maintain a stable indoor temperature. 
+                                Practice energy-saving habits like turning off lights, unplugging electronics,
+                                washing clothes in cold water, and running full loads in dishwashers and washing machines. Additionally, consider installing solar panels to generate your own electricity. 
+                                These steps can significantly cut your energy consumption and costs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer Section -->
+        <section class="footer">
+            <div class="footer-section">
+                <a href="/" class="logo"><img src="/images/eelogo4.png" alt="Logo"></a>
+                <ul>
+                    <h3>Page Links</h3>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About us</a></li>
+                    <li><a href="/services/">Our Services</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/contact/">Contact us</a></li>
+                </ul>
+                <ul class="quick">
+                    <h3>Quick Links</h3>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/cookie/">Cookie Policy</a></li>
+                    <li><a href="/termsandconditions/">Terms & Conditions</a></li>
+                </ul>
+                <div class="footer-buttons">
+                    <button class="footer-btn" id="requestquote">Request a quote</button>
+                    <button class="footer-btn" id="requestbook">Book Now</button>
+                </div>
+            </div>
+            <div class="social-icon">
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="sv"><?xml version="1.0" ?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="20px" height="20px" viewBox="0 0 24 24" style="fill: #fff;" xml:space="preserve"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+                <a href="#"><i class="ri-discuss-fill"></i></a>
+            </div>
+            <div class="footer-p">
+                <p>© Expert Electric</p>
+            </div>
+        </section>
+        
+
+         <!---Emailjs SDK-->
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+         <!---scroll reveal--->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!---js link--->
+        <script src="/index.js"></script>
+    </body>
+</html>

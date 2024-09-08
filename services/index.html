@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Services - Expert Electric</title>
+        <link rel="icon" type="images/png" href="/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+
+        <!-- Font Awesome CDN for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!---box icons link--->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <!---remix icon link--->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+        
+        <!---google font link--->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
+         <!---Google reCAPTCHA-->
+         <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+    </head>
+
+    <body>
+        <!-- -Header Section--->
+        <div class="top-header">
+            <p class="top-header-text">We're ready to help.</p>
+            <a href="#" class="top-header-button" id="bookNowww">BOOK NOW</a>
+        </div>
+        
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="/" class="logo"><img src="/images/eelogo4.png"></a>
+                </div>
+                <nav class="menu">
+                    <div class="head">
+                       
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about/">About us</a></li>
+                        <li class="dropdown">
+                            <a href="/services/" class="active">Our Services</a>
+                            <i class="fa solid fa-chevron-down"></i>
+                            <ul class="sub-menu">
+                                <li><a href="/services/#domestic-installation"><span>Domestic Installation</span></a></li>
+                                <li><a href="/services/#commercial-installation"><span>Commercial Installation</span></a></li>
+                                <li><a href="/services/#lighting"><span>Lighting</span></a></li>
+                                <li><a href="/services/#appliance-installation"><span>Appliance Installation</span></a></li>
+                                <li><a href="/services/#smoke-heat"><span>Smoke & Heat Alarms</span></a></li>
+                                <li><a href="/services/#waste"><span>Electrical Waste</span></a></li>
+                                <li><a href="/services/#certification"><span>Electrical Certification</span></a></li>
+                                <li><a href="/services/#security"><span>Security</span></a></li>
+                                <li><a href="/services/#renewable"><span>Renewable Energy</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/contact/">Contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">             
+                        <a href="tel:=447972677064"><i class="ri-phone-fill"></i>07972677064</a>
+                    </div>
+                    <button type="button" class="open-menu-btn">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+         <!-- Cookie Consent Banner -->
+         <div id="cookieConsent" class="cookie-consent-banner">
+            <div class="cookie-consent-container">
+                <p>This website uses cookies to ensure you get the best online experience on our website, by using them to analyse site traffic, personalise content to you and serve targeted ads for the latest offers. <a href="./index-privacy.html" class="link-button">Learn more</a></p>
+                <button id="cookieSettingsservice" class="cookie-consent-button">Cookie Settings</button>
+                <button id="acceptCookies" class="cookie-consent-button">Accept All</button>
+            </div>
+        </div>
+
+                <!-- Cookie Settings Modal -->
+                <div id="cookieSettingsModal" class="cookie-settings-modal">
+                    <div class="cookie-settings-content">
+                        <div class="cookie-settings-header">
+                            <h2>Our use of cookies</h2>
+                            <span class="cookie-settings-close">&times;</span>
+                        </div>
+                        <div class="cookie-settings-body">
+                            <p>This website uses cookies to ensure you get the best experience on our website. To read more about the cookies we use, please read our <a href="./index-cookie.html" class="link-button">cookie policy</a>.</p>
+                            <div class="divider"></div>
+                
+                            <h2>Necessary cookies</h2>
+                            <p>Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.</p>
+                            <div class="divider"></div>
+                
+                            <!-- Wrapping the entire h2 in a clickable div -->
+                            <div id="optionalCookiesHeader" class="header-container">
+                                <h2>Optional cookies <i class="ri-arrow-down-s-line icon"></i></h2>
+                            </div>
+                            <div class="divider"></div>
+                
+                            <div id="optionalCookies" class="cookie-settings-details">
+                                <p>Optional cookies are used for various purposes, including analytics and advertising. You can choose to enable or disable these cookies.</p>
+                
+                                <!-- Analytics Cookies Toggle -->
+                                <div class="cookie-setting-item">
+                                    <h3>Analytics cookies</h3>
+                                    <p>We’d like to set Google Analytics cookies to help us to improve our website by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone.</p>
+                                    <label class="switch">
+                                        <input type="checkbox" id="analyticsCookiesToggle" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id="toggleStatus" class="toggle-status">On</span>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                
+                            <!-- Save and Accept Button -->
+                            <button id="acceptCookies" class="cookie-consent-button savebtn">Save and Accept</button>
+                            <!-- <button id="saveAndAccept" class="cookie-consent-button">Save and Accept</button> -->
+                        </div>
+                    </div>
+                </div>
+
+            
+        <!-- Modal forms -->        
+        <div class="booking-form-modal" id="bookingFormModal">
+            <div class="booking-form-container">
+                <div class="banner">
+                    <h1>Make a Booking</h1>
+                    <h3 class="call">Simply call and we'll book you in now</h3>
+                    <h1 class="call1">0797 2677 064</h1>
+                    <span class="close-form" id="closeForm">&times;</span>
+                </div>
+                <div class="form-content">
+                    <h3 class="ca">Can't call us? You can still request a booking by filling out the form below.</h3>
+                    <form id="bookingForm" onsubmit="sendMail(event, 'bookingForm', 'bookingResponseMessage')">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingName">Name *</label>
+                                <input type="text" id="bookingName" placeholder="Name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingContactNumber">Contact Number *</label>
+                                <input type="text" id="bookingContactNumber" placeholder="Contact Number" name="contactNumber" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingEmail">Email Address *</label>
+                                <input type="email" id="bookingEmail" placeholder="Email Address" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookingPostCode">Post Code *</label>
+                                <input type="text" id="bookingPostCode" placeholder="Post Code" name="postCode" required>
+                            </div>
+                        </div>
+                        <div class="form-row form-group-full">
+                            <div class="form-group">
+                                <label for="bookingService">Service *</label>
+                                <div class="dropdown-container">
+                                    <select id="bookingService" name="service" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="electrical repair">Electrical Repair</option>
+                                        <option value="upgrades">Upgrades</option>
+                                        <option value="domestic installation">Domestic Installation</option>
+                                        <option value="commercial installation">Commercial Installation</option>
+                                        <option value="lighting">Lighting</option>
+                                        <option value="appliance installation">Appliance Installation</option>
+                                        <option value="smoke & heat alarms">Smoke & Heat Alarms</option>
+                                        <option value="electrical waste">Electrical Waste</option>
+                                        <option value="electrical certification">Electrical Certification</option>
+                                        <option value="security">Security</option>
+                                        <option value="renewables">Renewable Energy</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-group-full">
+                            <div class="form-group">
+                                <label for="bookingIssueDetails">Details About the Issue</label>
+                                <textarea id="bookingIssueDetails" rows="4" placeholder="Details About the Issue" name="issueDetails"></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-form-row contact-form-group-full">
+                            <div class="contact-form-group">
+                                <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required>
+                                <label id="bookingAgreeTerms">By using this contact form you agree to the Expert Electric Ltd Terms & Conditions, and use of your details in accordance with our Privacy Policy</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="sendBookingRequest">Submit Booking Request</button>
+                        <div id="bookingResponseMessage" class="response-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="booking-form-modal" id="quoteFormModal">
+            <div class="booking-form-container">
+                <div class="banner">
+                    <h1>Request a Quote</h1>
+                    <h3 class="call">Simply fill out the form below and we'll get back to you</h3>
+                    <h1 class="call1">0797 2677 064</h1>
+                    <span class="close-form" id="closeQuoteForm">&times;</span>
+                </div>
+                <div class="form-content">
+                    <h3 class="ca">Can't call us? You can still request a quote by filling out the form below.</h3>
+                    <form id="quoteForm" onsubmit="sendMail(event, 'quoteForm', 'quoteResponseMessage')">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quoteName">Name *</label>
+                                <input type="text" id="quoteName" placeholder="Name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quoteContactNumber">Contact Number *</label>
+                                <input type="text" id="quoteContactNumber" placeholder="Contact Number" name="contactNumber" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quoteEmail">Email Address *</label>
+                                <input type="email" id="quoteEmail" placeholder="Email Address" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quotePostCode">Post Code *</label>
+                                <input type="text" id="quotePostCode" placeholder="Post Code" name="postCode" required>
+                            </div>
+                        </div>
+                        <div class="form-row form-group-full">
+                            <div class="form-group">
+                                <label for="quoteService">Service *</label>
+                                <div class="dropdown-container">
+                                    <select id="quoteService" name="service" required>
+                                        <option value="" disabled selected>Select a service</option>
+                                        <option value="electrical repair">Electrical Repair</option>
+                                        <option value="upgrades">Upgrades</option>
+                                        <option value="domestic installation">Domestic Installation</option>
+                                        <option value="commercial installation">Commercial Installation</option>
+                                        <option value="lighting">Lighting</option>
+                                        <option value="appliance installation">Appliance Installation</option>
+                                        <option value="smoke & heat alarms">Smoke & Heat Alarms</option>
+                                        <option value="electrical waste">Electrical Waste</option>
+                                        <option value="electrical certification">Electrical Certification</option>
+                                        <option value="security">Security</option>
+                                        <option value="renewables">Renewable Energy</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row form-group-full">
+                            <div class="form-group">
+                                <label for="quoteIssueDetails">Details About the Issue</label>
+                                <textarea id="quoteIssueDetails" rows="4" placeholder="Details About the Issue" name="issueDetails"></textarea>
+                            </div>
+                        </div>
+                        <div class="contact-form-row contact-form-group-full">
+                            <div class="contact-form-group">
+                                <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required>
+                                <label id="quoteAgreeTerms">By using this contact form you agree to the Expert Electric Ltd Terms & Conditions, and use of your details in accordance with our Privacy Policy</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="sendQuoteRequest">Submit Quote Request</button>
+                        <div id="quoteResponseMessage" class="response-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            try {
+                emailjs.init("UQIAN58pk32SA6Sp5");
+                console.log("EmailJS initialized successfully.");
+            } catch (e) {
+                console.error("Failed to initialize EmailJS:", e);
+            }
+
+            });
+
+                document.addEventListener('DOMContentLoaded', function() {
+            try {
+                emailjs.init("UQIAN58pk32SA6Sp5");
+                console.log("EmailJS initialized successfully.");
+            } catch (e) {
+                console.error("Failed to initialize EmailJS:", e);
+            }
+            });
+
+            function sendMail(event, formId, responseMessageId) {
+                event.preventDefault();
+
+                var form = document.getElementById(formId);
+                if (!form) {
+                    console.error("Form with ID " + formId + " not found.");
+                    return;
+                }
+
+                var params = {};
+
+                try {
+                    if (formId === 'contactForm') {
+                        params = {
+                            name: form.querySelector('input[id="contactName"]')?.value || '',
+                            number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="contactEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="contactPostCode"]')?.value || '',
+                            service: form.querySelector('select[id="contactService"]')?.value || '',
+                            details: form.querySelector('textarea[id="contactIssueDetails"]')?.value || ''
+                        };
+                    } else if (formId === 'bookingForm') {
+                        params = {
+                            name: form.querySelector('input[id="bookingName"]')?.value || '',
+                            number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="bookingEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="bookingPostCode"]')?.value || '',
+                            service: form.querySelector('select[id="bookingService"]')?.value || '',
+                            details: form.querySelector('textarea[id="bookingIssueDetails"]')?.value || ''
+                        };
+                    } else if (formId === 'quoteForm') {
+                        params = {
+                            name: form.querySelector('input[id="quoteName"]')?.value || '',
+                            number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="quoteEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="quotePostCode"]')?.value || '',
+                            service: form.querySelector('select[id="quoteService"]')?.value || '',
+                            details: form.querySelector('textarea[id="quoteIssueDetails"]')?.value || ''
+                        };
+                    } else {
+                        console.error("Form ID " + formId + " does not match any known forms.");
+                        return;
+                    }
+
+                    console.log("Form Data: ", params); // Debugging log
+
+                    emailjs.send("service_el2g39x", "template_nkryzl2", params)
+                        .then(res => {
+                            // Clear form fields
+                            if (form instanceof HTMLFormElement) {
+                                form.reset();
+                                // Uncheck the checkbox explicitly if present
+                                let checkbox = form.querySelector("input[type='checkbox']");
+                                if (checkbox) checkbox.checked = false;
+                            }
+
+                            // Redirect to success page
+                            window.location.href = 'index-success.html';
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                            // Redirect to failure page
+                            window.location.href = 'index-failure.html';
+                        });
+                } catch (error) {
+                    console.error("Error processing form data:", error);
+                }
+            }  
+        </script>
+            
+
+
+        <!--- About Us Banner Section--->
+        <section class="zero">
+            <div class="ban"></div>  
+            <div class="indentation-line-banner-service"></div>
+            <div class="banner-page">                                                 
+                <div class="bannerr-items">
+                    <div class="bannerr">             
+                        <h1 class="placeban">Our Services</h1>
+                    </div>
+                </div>   
+            </div>   
+        </section>
+        
+        <!---Service Summary Section--->
+        <section class="Summary">
+            <div class="short-summary">
+                <div class="section-title note s1">
+                    <h1>Expert Electric - We're Ready When You Are!</h1>
+                </div>
+              <!-- <h2 class="title-about">nothing but Wires Ltd - We're Ready When You Are!</h2> -->
+              <h3 class="s2">
+                Expert Electric are dedicated to providing top-notch electrical solutions tailored to meet your needs. <br><br>
+                We offer a range of services from electrical repairs, upgrades, and maintenance to new installations. Safety is paramount to us, we work in a way that strives to create a safe environment for every client.<br><br>
+                Our comprehensive services include:
+              </h3>
+            </div> 
+        </section>
+
+        <section class="our-services">
+            <div class="our-service light-grey" id="domestic-installation">
+              <div class="content s3">
+                    <h2 class="title-about">Domestic Installation</h2>
+                    <p>
+                        Our domestic installations service covers a wide range of 
+                        home electrical needs to ensure your living space is safe, 
+                        functional, and up-to-date. <br><br> 
+                        We ensure that your electrical system meets the highest safety standards and 
+                        accommodates your current and future needs. 
+                    </p>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Home Wiring and Re-wiring:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Whether you're building a new home or upgrading an older property, we provide high-quality wiring solutions that meet all current standards and regulations. Our expert electricians handle everything from planning and installation to testing and certification, guaranteeing a seamless and efficient service.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Consumer Unit Installation and Upgrades:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Keep your home’s electrical system safe and efficient with our consumer unit installation and upgrade services. We install modern consumer units (fuse boxes) equipped with the latest safety features, including RCD protection. Upgrading an outdated consumer unit can prevent electrical hazards, enhance system performance, and ensure compliance with current safety standards.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Socket-outlets and Switches:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p> Enhance the functionality and aesthetics of your home with our socket-outlet and switch installation services. Whether you need additional outlets, modern switch designs, or USB-integrated sockets, we provide tailored solutions to meet your needs. Our electricians ensure that all installations are carried out safely and adhere to the highest standards of quality.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Domestic Electrical Equipment and Entertainment:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p> We offer a comprehensive range of services for the installation and maintenance of domestic electrical equipment and entertainment systems. Our team is skilled in installing ceiling fans, light fixtures, and setting up home entertainment systems to ensure a seamless and enjoyable experience. Whether it’s a simple fixture or a complex entertainment setup, we’ve got you covered.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Smart Technology:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Transform your living space with our smart home services. We specialize in the installation and integration of smart home technologies, including automated lighting, smart thermostats, security systems, and home entertainment controls. Our experts design and implement customized smart home solutions that enhance convenience, security, and energy efficiency, making your home smarter and more connected.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Upgrades and Maintainence:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Regular upgrades and maintenance are essential to keep your electrical systems operating efficiently and safely. We offer a range of services, including updating old wiring, upgrading lighting fixtures, and enhancing your electrical infrastructure. Our preventive maintenance services help identify and address potential issues before they become major problems, ensuring the longevity and safety of your electrical systems.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Troubleshooting and Repairs:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>When electrical issues arise, our troubleshooting and repair services are here to help. Our experienced electricians quickly diagnose and resolve a wide range of problems, from flickering lights and faulty outlets to circuit breaker issues and complete power outages. We use advanced diagnostic tools to identify the root cause and provide effective solutions, restoring your electrical systems to optimal performance.</p>
+                        </div>
+                    </div>
+                    <a href="#Request a quote" class="btn-1 ghost-1" id="quote" tabindex="0">Request a quote</a>
+              </div>
+              <div class="image s4"><img src="/images/domestic.jpg" alt="Service 1"></div>
+            </div>
+            <div class="our-service white" id="commercial-installation">
+              <div class="image s5"><img src="/images/txxl.jpg" alt="Service 2"></div>
+              <div class="content s6">
+                <h2 class="title-about">Commercial Installation</h2>
+                <p>
+                    Our commercial electrical installations are designed to meet the 
+                    demanding needs of businesses and commercial properties. <br><br>We provide comprehensive 
+                    solutions that ensure your electrical systems are reliable, efficient, and compliant with industry standards.
+                </p>
+                <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Wiring systems:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Wiring systems and dedicated circuits for heavy-duty commercial equipment, structured cabling systems for data networks, including Ethernet cables, fiber optics, and data jacks ensuring they receive sufficient power and are safely connected.</p>
+                    </div>
+                </div>
+                <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Lighting Systems:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Installing and maintaining general lighting systems for offices, retail spaces, and other commercial environments. This includes overhead lighting, recessed lighting, and track lighting.</p>
+                    </div>
+                </div>
+                <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Distribution Board Installation and Upgrades:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Installing and maintaining the main distribution board that manages the electrical supply throughout the building to installing sub panels to distribute power to different areas or floors within the commercial property, ensuring an efficient and balanced power supply.</p>
+                    </div>
+                </div>
+                <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Routine Maintenance:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>  Routine maintenance for commercial properties involves regular inspections, testing, and cleaning of electrical systems to ensure safety, efficiency, and compliance with regulations. This includes visual inspections, testing, and tightening connections.</p>
+                    </div>
+                </div>
+                <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Troubleshooting and Repairs:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Identifying and resolving electrical issues to ensure safety and efficiency. This includes diagnosing faults in wiring, outlets, switches, and equipment, and addressing problems such as power outages, tripped circuits, and faulty connections. Repairs may involve replacing damaged components, rewiring, and updating electrical panels to meet current standards. Regular troubleshooting helps prevent future issues, ensuring a reliable and safe electrical system for your commercial property.</p>
+                    </div>
+                </div>
+                <a href="#Request a quote" class="btn-1 ghost-1" id="quoteone" tabindex="0">Request a quote</a>
+              </div>
+            </div>
+            <div class="our-service light-grey" id="lighting">
+                <div class="content s7">
+                      <h2 class="title-about">Lighting</h2>
+                      <p>
+                        Our expert lighting installation services ensure your home or business is well-lit, 
+                        energy-efficient, and visually appealing.<br><br> Whether you're looking to upgrade existing lighting 
+                        or install new fixtures, our team is equipped to handle all your lighting needs with precision and care.
+                      </p>
+                      <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Indoor Lighting:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p> From chandeliers to recessed lighting, we provide a range of options to enhance the ambiance of your indoor spaces.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Outdoor Lighting:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p> Improve security and aesthetics with our outdoor lighting solutions, including landscape lighting and security lights.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Smart Lighting:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Integrate smart lighting systems that you can control from your smartphone or voice-activated assistant.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Energy-Efficient Solutions:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Save on energy costs with our LED lighting installations and energy-efficient fixtures.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Fixture Upgrades:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Upgrade outdated or inefficient lighting fixtures to modern, stylish, and energy-saving options.</p>
+                        </div>
+                    </div>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Troubleshooting and Repairs:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>If you're experiencing issues with your current lighting, our electricians can diagnose and repair any problems quickly and efficiently.</p>
+                        </div>
+                    </div>
+                      <a href="#Request a quote" class="btn-1 ghost-1" id="quotetwo" tabindex="0">Request a quote</a>
+                </div>
+                <div class="image s8"><img src="/images/ety.jpg" alt="Service 1"></div>
+              </div>
+              <div class="our-service white" id="appliance-installation">
+                <div class="image s10"><img src="/images/appliance.jpg" alt="Service 2"></div>
+                <div class="content s9">
+                  <h2 class="title-about">Appliance Installation</h2>
+                  <p>
+                    Ensuring that your new appliances are installed correctly and safely is essential for optimal performance and longevity.<br><br>
+                     Our professional appliance installation services are designed to provide you with peace of mind and convenience. 
+                     Whether you’re upgrading your kitchen or outfitting a new home, we handle every step of the installation process with precision and care.
+                  </p>
+                  <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Refrigerator Installation:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Proper setup and connection to ensure your refrigerator operates efficiently, including water line connections for models with built-in ice makers.</p>
+                    </div>
+                   </div>
+                   <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Oven and Stove Installation:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p> Safe installation of gas, electric, or dual-fuel ranges, ensuring all connections are secure and compliant with safety standards.</p>
+                    </div>
+                   </div>
+                   <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Dishwasher Installation:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Expert installation of dishwashers, including plumbing and electrical connections, to ensure optimal performance and leak prevention.</p>
+                    </div>
+                   </div>
+                   <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Washer and Dryer Installation:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Installation of both front-loading and top-loading washers and dryers, including venting and plumbing connections for optimal functionality.</p>
+                    </div>
+                   </div>
+                  <a href="#Request a quote" class="btn-1 ghost-1" id="quotethree" tabindex="0">Request a quote</a>
+                </div>
+              </div>
+              <div class="our-service light-grey" id="smoke-heat">
+                <div class="content s11">
+                      <h2 class="title-about">Smoke and Heat Alarms</h2>
+                      <p>
+                        Safety is paramount in any home or business, and having reliable smoke and heat alarms is essential for early detection of fire hazards.<br><br>
+                        Our comprehensive smoke and heat alarm installation services ensure that your property is protected with the latest technology and optimal placement for maximum effectiveness.
+                      </p>
+                      <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Smoke Alarm Installation:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Proper installation of smoke alarms in key areas of your home or business, ensuring early detection of smoke and fire. We install both ionization and photoelectric smoke alarms to provide comprehensive coverage.</p>
+                        </div>
+                      </div>
+                      <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Heat Alarm Installation:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Ideal for areas where smoke alarms may not be suitable, such as kitchens and garages. Heat alarms detect rapid increases in temperature, providing an additional layer of safety.</p>
+                        </div>
+                      </div>
+                      <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Interconnected Systems:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Installation of interconnected alarm systems, where all alarms sound simultaneously when one is triggered, ensuring that everyone in the building is alerted to potential danger.</p>
+                        </div>
+                      </div>
+                      <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Battery and Hardwired Options:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>We offer both battery-operated and hardwired alarms with battery backup, ensuring continuous operation even during power outages.</p>
+                        </div>
+                      </div>
+                      <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Regular Maintenance and Testing:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Ongoing maintenance services, including testing and battery replacement, to ensure your alarms are always in working order.</p>
+                        </div>
+                      </div>
+                      <a href="#Request a quote" class="btn-1 ghost-1" id="quotefour" tabindex="0">Request a quote</a>
+                </div>
+                <div class="image s12"><img src="/images/alarm.jpg" alt="Service 1"></div>
+              </div>
+              <div class="our-service white" id="waste">
+                <div class="image s17"><img src="/images/wast.jpg" alt="Service 2"></div>
+                <div class="content s18">
+                  <h2 class="title-about">Electrical Waste</h2>
+                  <p>
+                    Proper disposal and management of electrical waste is crucial for environmental sustainability and public health. <br><br>We offer comprehensive electrical 
+                    waste management services that ensure your old and unused electrical equipment is donated or disposed of responsibly and recycled efficiently.<br><br>
+                    By choosing our electrical waste management services, you contribute to a cleaner environment and a more sustainable future. 
+                  </p>
+                  <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Donate Electrical Items:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Donating electrical items to charity is a great way to help those in need while promoting environmental sustainability. Ensure the items are in good working condition, clean, and include necessary accessories. Some charities offer pickup services for larger items, while others require you to drop off the donations at their locations, our team can arrange these collections.</p>
+                    </div>
+                   </div>
+                   <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Collection and Disposal:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Our team provides hassle-free collection and disposal services for all types of electrical waste, including old appliances, broken devices, and outdated equipment. We ensure safe and compliant disposal.</p>
+                    </div>
+                   </div>
+                   <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Recycling and Reclamation:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>We prioritize recycling to minimize the impact on landfills and the environment. Our process involves dismantling devices, sorting components, and extracting valuable materials like metals, plastics, and rare earth elements. These materials are then processed and reused, contributing to the circular economy.</p>
+                    </div>
+                   </div>
+                   <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Sustainable Practises:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Our commitment to sustainability extends beyond recycling. We also provide advice on how to reduce electrical waste through proper maintenance, repair, and upgrades of your existing equipment. By prolonging the life of your devices, you can contribute to reducing waste and conserving resources.</p>
+                    </div>
+                   </div>
+                  <a href="#Request a quote" class="btn-1 ghost-1" id="quoteseven" tabindex="0">Request a quote</a>
+                </div>
+              </div>
+                <div class="our-service light-grey" id="certification">
+                    <div class="content s15">
+                        <h2 class="title-about">Electrical Certification</h2>
+                        <p>
+                            Electrical certification is crucial to ensure that your property's electrical systems are safe, compliant, and functioning correctly.<br><br>
+                            Our comprehensive electrical certification services provide peace of mind by verifying that all electrical installations meet the required standards and regulations. 
+                            Whether you are a homeowner, landlord, or business owner, our team of qualified electricians is here to help.
+                        </p>
+                        <div class="service-info-accordion odd">
+                            <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                                <h3>Safety Inspections:</h3>
+                                <div class="service-icon-container">
+                                    <i class="ri-add-line service-toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="service-info-answer">
+                                <p>Thorough safety inspections to identify any potential electrical hazards. We check all wiring, outlets, switches, and appliances to ensure they are safe and functioning correctly.</p>
+                            </div>
+                        </div>
+                        <div class="service-info-accordion odd">
+                            <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                                <h3>Electrical Installation Condition Reports (EICR):</h3>
+                                <div class="service-icon-container">
+                                    <i class="ri-add-line service-toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="service-info-answer">
+                                <p>Detailed reports that assess the condition of your electrical installations. An EICR is essential for identifying any deficiencies and ensuring compliance with the latest electrical standards.</p>
+                            </div>
+                        </div>
+                        <div class="service-info-accordion odd">
+                            <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                                <h3>Landlord Certifications:</h3>
+                                <div class="service-icon-container">
+                                    <i class="ri-add-line service-toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="service-info-answer">
+                                <p>Compliance checks for rental properties to ensure they meet legal requirements. We provide Electrical Safety Certificates for landlords, helping them to meet their obligations and keep tenants safe.</p>
+                            </div>
+                        </div>
+                        <div class="service-info-accordion odd">
+                            <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                                <h3>PAT Testing:</h3>
+                                <div class="service-icon-container">
+                                    <i class="ri-add-line service-toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="service-info-answer">
+                                <p>Portable Appliance Testing (PAT) to ensure that all electrical appliances are safe to use. Regular PAT testing is essential for businesses to comply with health and safety regulations.</p>
+                            </div>
+                        </div>
+                        <div class="service-info-accordion odd">
+                            <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                                <h3>New Installation Certification:</h3>
+                                <div class="service-icon-container">
+                                    <i class="ri-add-line service-toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="service-info-answer">
+                                <p>Certification for new electrical installations, including residential, commercial, and industrial properties.</p>
+                            </div>
+                        </div>
+                        <div class="service-info-accordion odd">
+                            <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                                <h3>Expert Advice and Consultation:</h3>
+                                <div class="service-icon-container">
+                                    <i class="ri-add-line service-toggle-icon"></i>
+                                </div>
+                            </div>
+                            <div class="service-info-answer">
+                                <p>Professional advice and consultation to help you understand the certification requirements and ensure your property is compliant.</p>
+                            </div>
+                        </div>
+                        <a href="#Request a quote" class="btn-1 ghost-1" id="quotesix" tabindex="0">Request a quote</a>
+                    </div>
+                    <div class="image s16"><img src="/images/testing.jpg" alt="Service 1"></div>
+              </div>
+              <div class="our-service white" id="security">
+                <div class="image s13"><img src="/images/camera.jpg" alt="Service 2"></div>
+                <div class="content s14">
+                  <h2 class="title-about">Security</h2>
+                  <p>
+                    Ensuring the safety and security of your home or business is our top priority. 
+                    Our security solutions are designed to provide peace of mind by protecting your property from potential threats.<br><br>
+                    From advanced surveillance systems to robust alarm installations, we offer a range of services tailored to meet your specific security needs.
+                  </p>
+                  <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Surveillance Cameras:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Monitor your property around the clock with high-definition surveillance cameras, which can be customized to suit your specific needs, whether you require indoor monitoring, outdoor surveillance, or both. You will be able to get real-time footage accessible from your smartphone or computer.</p>
+                    </div>
+                  </div>
+                  <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Alarm Systems:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Protect your property with state-of-the-art alarm systems. Alarm systems are designed to detect unauthorized entry and alert you immediately. With options for both wired and wireless installations, we ensure your alarm system is reliable and tailored to your security requirements.</p>
+                    </div>
+                  </div>
+                  <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Smart Security Systems:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Enhance your security with smart security systems that integrate with your home automation. Control and monitor your security devices remotely, receive instant alerts, and enjoy features like automated locking and unlocking of doors, motion detection, and real-time notifications on your mobile devices.</p>
+                    </div>
+                  </div>
+                  <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Security Lighting:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p> Illuminate your property and deter potential intruders with strategically placed security lighting. We install motion-activated lights, floodlights, and other lighting solutions that enhance visibility and provide an added layer of protection. Our energy-efficient lighting options ensure your property is secure without increasing your energy costs.</p>
+                    </div>
+                  </div>
+                  <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Video Doorbells:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>See who’s at your door, whether you're at home or away, with video doorbells. These devices offer high-definition video, two-way audio, and motion detection, allowing you to communicate with visitors and monitor your entryway from your smartphone.</p>
+                    </div>
+                  </div>
+                  <div class="service-info-accordion even">
+                    <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                        <h3>Regular Maintenance and Upgrades:</h3>
+                        <div class="service-icon-container">
+                            <i class="ri-add-line service-toggle-icon"></i>
+                        </div>
+                    </div>
+                    <div class="service-info-answer">
+                        <p>Keep your security systems in optimal condition with our regular maintenance and upgrade services. We perform routine checks, update software, and ensure all components are functioning correctly. Upgrading your systems to the latest technology keeps your property protected against evolving security threats.</p>
+                    </div>
+                  </div>
+                  <a href="#Request a quote" class="btn-1 ghost-1" id="quotefive" tabindex="0">Request a quote</a>
+                </div>
+              </div>
+              <div class="our-service light-grey" id="renewable">
+                <div class="content s19">
+                    <h2 class="title-about">Renewable Energy</h2>
+                    <p>
+                        Renewable energy sources are crucial in addressing the challenges of climate change and reducing our dependence on fossil fuels.<br><br>
+                         They are derived from natural processes that are replenished constantly, such as sunlight, wind, and geothermal heat. 
+                         One of the most popular and effective forms of renewable energy is solar power, which converts sunlight into electricity using photovoltaic (PV) cells.<br><br>
+                         The Solar Installation process:<br><Br>
+                        1. Initial Consultation and Site Assessment<br>
+                        2. Installation<br>
+                        3. Inspection and Testing<br>
+                        4. Activation    
+                    </p>
+                    <div class="service-info-accordion odd">
+                        <div class="service-info-question" onclick="toggleServiceInfo(this)">
+                            <h3>Solar Installation:</h3>
+                            <div class="service-icon-container">
+                                <i class="ri-add-line service-toggle-icon"></i>
+                            </div>
+                        </div>
+                        <div class="service-info-answer">
+                            <p>Solar installation is a smart investment in both the environment and your future. By harnessing the power of the sun, you can enjoy significant cost savings, contribute to a cleaner planet, and increase your property’s value. Whether for residential or commercial use, solar energy offers a sustainable solution that benefits both you and the environment.</p>
+                        </div>
+                       </div>
+                    <a href="#Request a quote" class="btn-1 ghost-1" id="quoteeight" tabindex="0">Request a quote</a>
+                </div>
+                <div class="image s20"><img src="/images/solar.jpg" alt="Service 1"></div>
+          </div>
+            <!-- Repeat similar blocks for other services, alternating light-grey and white classes -->
+          </section>
+          
+          
+        
+        
+
+        <!--- Process Section--->
+        <section class="process-section">
+            <div class="section-title process s21">
+                <h1>Our process</h1>
+            </div>
+            <div class="process-card-container s22">
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fa-regular fa-message"></i>
+                    </div>
+                    <h1>Tell us the details</h1>
+                    <div class="process-card-line"></div>
+                    <p>Reach out to us using whichever contact method suits you, and tell us about your project.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </div>
+                    <h1>We provide a quote</h1>
+                    <div class="process-card-line"></div>
+                    <p>We will go over the details and provide you with a no obligation quote to have the work carried out.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-card-icon">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h1>Receive a start date</h1>
+                    <div class="process-card-line"></div>
+                    <p>If you're satisfied with the quote, we will contact you to arrange a date for us to complete the work.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!---Footer Section--->
+        <section class="footer">
+            <div class="footer-section">
+                <a href="/" class="logo"><img src="/images/eelogo4.png" alt="Logo"></a>
+                <ul>
+                    <h3>Page Links</h3>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About us</a></li>
+                    <li><a href="/services/">Our Services</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/contact/">Contact us</a></li>
+                </ul>
+                <ul class="quick">
+                    <h3>Quick Links</h3>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/cookie/">Cookie Policy</a></li>
+                    <li><a href="/termsandconditions/">Terms & Conditions</a></li>
+                </ul>
+                <div class="footer-buttons">
+                    <button class="footer-btn" id="requestquote">Request a quote</button>
+                    <button class="footer-btn" id="requestbook">Book Now</button>
+                </div>
+            </div>
+            <div class="social-icon">
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#" class="sv"><?xml version="1.0" ?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" width="20px" height="20px" viewBox="0 0 24 24" style="fill: #fff;" xml:space="preserve"><path d="M14.095479,10.316482L22.286354,1h-1.940718l-7.115352,8.087682L7.551414,1H1l8.589488,12.231093L1,23h1.940717  l7.509372-8.542861L16.448587,23H23L14.095479,10.316482z M11.436522,13.338465l-0.871624-1.218704l-6.924311-9.68815h2.981339  l5.58978,7.82155l0.867949,1.218704l7.26506,10.166271h-2.981339L11.436522,13.338465z"/></svg></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+                <a href="#"><i class="ri-discuss-fill"></i></a>
+            </div>
+            <div class="footer-p">
+                <p>© Expert Electric</p>
+            </div>
+        </section>
+
+
+        <!---Emailjs SDK-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+         <!---scroll reveal--->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!---js link--->
+        <script src="/index.js"></script>
+        <script src="/indexservice.js"></script>
+    </body>
+</html>
