@@ -486,12 +486,12 @@
                             }
 
                             // Redirect to success page
-                            window.location.href = 'index-success.html';
+                            window.location.href = '/success/';
                         })
                         .catch((err) => {
                             console.log(err);
                             // Redirect to failure page
-                            window.location.href = 'index-failure.html';
+                            window.location.href = '/failure/';
                         });
                 } catch (error) {
                     console.error("Error processing form data:", error);
