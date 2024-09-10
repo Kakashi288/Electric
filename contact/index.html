@@ -409,7 +409,7 @@
                         </div>
                         <div class="contact-form-row contact-form-group-full">
                             <div class="contact-form-group">
-                                
+                                <input type="checkbox" id="quoteAgreeTerms" name="agreeTerms" required><br>
                                 <label id="contactAgreeTerms">
                                     By using this contact form you agree to the Expert Electric Ltd 
                                     <a href="/termsandconditions/" style="text-decoration: underline;">Terms & Conditions</a>, 
@@ -419,8 +419,7 @@
                                 <div class="error-message" id="errorAgreeTerms"></div>
                             </div>
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6LfXVT0qAAAAAKYUVJKd8b4IBnR-24rxyUZH0hOG"></div>
-                        <br/>
+             
                         <button type="submit" class="contact-button">Submit Enquiry</button>
                         <div id="contactResponseMessage" class="response-message"></div>
                     </form>
@@ -430,95 +429,83 @@
         
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                try {
-                    emailjs.init("UQIAN58pk32SA6Sp5");
-                    console.log("EmailJS initialized successfully.");
-                } catch (e) {
-                    console.error("Failed to initialize EmailJS:", e);
-                }
-            });
-        
-            function sendMail(event, formId, responseMessageId) {
-                event.preventDefault();
-        
-                var form = document.getElementById(formId);
-                if (!form) {
-                    console.error("Form with ID " + formId + " not found.");
+        try {
+            emailjs.init("UQIAN58pk32SA6Sp5");
+            console.log("EmailJS initialized successfully.");
+        } catch (e) {
+            console.error("Failed to initialize EmailJS:", e);
+        }
+        });
+
+        function sendMail(event, formId, responseMessageId) {
+            event.preventDefault();
+
+            var form = document.getElementById(formId);
+            if (!form) {
+                console.error("Form with ID " + formId + " not found.");
+                return;
+            }
+
+            var params = {};
+
+            try {
+                if (formId === 'contactForm') {
+                    params = {
+                        name: form.querySelector('input[id="contactName"]')?.value || '',
+                        number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
+                        email: form.querySelector('input[id="contactEmail"]')?.value || '',
+                        postcode: form.querySelector('input[id="contactPostCode"]')?.value || '',
+                        service: form.querySelector('select[id="contactService"]')?.value || '',
+                        details: form.querySelector('textarea[id="contactIssueDetails"]')?.value || ''
+                    };
+                } else if (formId === 'bookingForm') {
+                    params = {
+                        name: form.querySelector('input[id="bookingName"]')?.value || '',
+                        number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
+                        email: form.querySelector('input[id="bookingEmail"]')?.value || '',
+                        postcode: form.querySelector('input[id="bookingPostCode"]')?.value || '',
+                        service: form.querySelector('select[id="bookingService"]')?.value || '',
+                        details: form.querySelector('textarea[id="bookingIssueDetails"]')?.value || ''
+                    };
+                } else if (formId === 'quoteForm') {
+                    params = {
+                        name: form.querySelector('input[id="quoteName"]')?.value || '',
+                        number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
+                        email: form.querySelector('input[id="quoteEmail"]')?.value || '',
+                        postcode: form.querySelector('input[id="quotePostCode"]')?.value || '',
+                        service: form.querySelector('select[id="quoteService"]')?.value || '',
+                        details: form.querySelector('textarea[id="quoteIssueDetails"]')?.value || ''
+                    };
+                } else {
+                    console.error("Form ID " + formId + " does not match any known forms.");
                     return;
                 }
-        
-                // Check if reCAPTCHA was clicked (get the response)
-                var recaptchaResponse = grecaptcha.getResponse();
-                var recaptchaError = document.getElementById("recaptchaError");
-        
-                if (recaptchaResponse === "") {
-                    recaptchaError.innerHTML = "Please complete the reCAPTCHA.";
-                    return; // Stop form submission if reCAPTCHA is not clicked
-                } else {
-                    recaptchaError.innerHTML = ""; // Clear error if reCAPTCHA was clicked
-                }
-        
-                var params = {};
-        
-                try {
-                    if (formId === 'contactForm') {
-                        params = {
-                            name: form.querySelector('input[id="contactName"]')?.value || '',
-                            number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
-                            email: form.querySelector('input[id="contactEmail"]')?.value || '',
-                            postcode: form.querySelector('input[id="contactPostCode"]')?.value || '',
-                            service: form.querySelector('select[id="contactService"]')?.value || '',
-                            details: form.querySelector('textarea[id="contactIssueDetails"]')?.value || ''
-                        };
-                    } else if (formId === 'bookingForm') {
-                        params = {
-                            name: form.querySelector('input[id="bookingName"]')?.value || '',
-                            number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
-                            email: form.querySelector('input[id="bookingEmail"]')?.value || '',
-                            postcode: form.querySelector('input[id="bookingPostCode"]')?.value || '',
-                            service: form.querySelector('select[id="bookingService"]')?.value || '',
-                            details: form.querySelector('textarea[id="bookingIssueDetails"]')?.value || ''
-                        };
-                    } else if (formId === 'quoteForm') {
-                        params = {
-                            name: form.querySelector('input[id="quoteName"]')?.value || '',
-                            number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
-                            email: form.querySelector('input[id="quoteEmail"]')?.value || '',
-                            postcode: form.querySelector('input[id="quotePostCode"]')?.value || '',
-                            service: form.querySelector('select[id="quoteService"]')?.value || '',
-                            details: form.querySelector('textarea[id="quoteIssueDetails"]')?.value || ''
-                        };
-                    } else {
-                        console.error("Form ID " + formId + " does not match any known forms.");
-                        return;
-                    }
-        
-                    console.log("Form Data: ", params); // Debugging log
-        
-                    emailjs.send("service_el2g39x", "template_nkryzl2", params)
-                        .then(res => {
-                            // Clear form fields
-                            if (form instanceof HTMLFormElement) {
-                                form.reset();
-                                // Uncheck the checkbox explicitly if present
-                                let checkbox = form.querySelector("input[type='checkbox']");
-                                if (checkbox) checkbox.checked = false;
-                            }
-        
-                            // Redirect to success page
-                            window.location.href = '/success/';
-                        })
-                        .catch((err) => {
-                            console.log(err);
-                            // Redirect to failure page
-                            window.location.href = '/failure/';
-                        });
-                } catch (error) {
-                    console.error("Error processing form data:", error);
-                }
+
+                console.log("Form Data: ", params); // Debugging log
+
+                emailjs.send("service_el2g39x", "template_nkryzl2", params)
+                    .then(res => {
+                        // Clear form fields
+                        if (form instanceof HTMLFormElement) {
+                            form.reset();
+                            // Uncheck the checkbox explicitly if present
+                            let checkbox = form.querySelector("input[type='checkbox']");
+                            if (checkbox) checkbox.checked = false;
+                        }
+
+                        // Redirect to success page
+                        window.location.href = '/success/';
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                        // Redirect to failure page
+                        window.location.href = '/failure/';
+                    });
+            } catch (error) {
+                console.error("Error processing form data:", error);
             }
-        </script>
-        
+        }  
+    </script>
         
    
        
