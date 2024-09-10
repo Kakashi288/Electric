@@ -21,9 +21,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">   
-         <!---Google reCAPTCHA-->
-         <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
-        
+        <!---Google reCAPTCHA-->
+        <script src="https://www.google.com/recaptcha/api.js?render=6LdIDz0qAAAAAAYxiMbznPy67LiRm1QwKpjb5T4Z"></script>
+        <script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LdIDz0qAAAAAAYxiMbznPy67LiRm1QwKpjb5T4Z', { action: 'homepage' }).then(function(token) {
+                    // Pass the token to your backend for validation
+                });
+            });
+        </script>
+            
     </head>
 
     <body>

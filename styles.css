@@ -32,6 +32,11 @@ body{
     --button-load-delay: calc(var(--bh0-load-delay) + var(--bh3-time));
 }
 
+.grecaptcha-badge {
+    left: 0 !important;
+    right: auto !important;
+}
+
 .top-header {
     display: flex;
     justify-content: end;
