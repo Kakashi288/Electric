@@ -447,78 +447,78 @@
                     return;
                 }
         
+                // Check if reCAPTCHA was clicked (get the response)
+                var recaptchaResponse = grecaptcha.getResponse();
+                var recaptchaError = document.getElementById("recaptchaError");
+        
+                if (recaptchaResponse === "") {
+                    recaptchaError.innerHTML = "Please complete the reCAPTCHA.";
+                    return; // Stop form submission if reCAPTCHA is not clicked
+                } else {
+                    recaptchaError.innerHTML = ""; // Clear error if reCAPTCHA was clicked
+                }
+        
                 var params = {};
         
                 try {
-                    // reCAPTCHA token will be added after executing reCAPTCHA validation
-                    grecaptcha.ready(function() {
-                        grecaptcha.execute('6LfXVT0qAAAAAKYUVJKd8b4IBnR-24rxyUZH0hOG', {action: 'submit'}).then(function(token) {
-                            // Add the reCAPTCHA token to the params object
-                            params['g-recaptcha-response'] = token;
+                    if (formId === 'contactForm') {
+                        params = {
+                            name: form.querySelector('input[id="contactName"]')?.value || '',
+                            number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="contactEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="contactPostCode"]')?.value || '',
+                            service: form.querySelector('select[id="contactService"]')?.value || '',
+                            details: form.querySelector('textarea[id="contactIssueDetails"]')?.value || ''
+                        };
+                    } else if (formId === 'bookingForm') {
+                        params = {
+                            name: form.querySelector('input[id="bookingName"]')?.value || '',
+                            number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="bookingEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="bookingPostCode"]')?.value || '',
+                            service: form.querySelector('select[id="bookingService"]')?.value || '',
+                            details: form.querySelector('textarea[id="bookingIssueDetails"]')?.value || ''
+                        };
+                    } else if (formId === 'quoteForm') {
+                        params = {
+                            name: form.querySelector('input[id="quoteName"]')?.value || '',
+                            number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
+                            email: form.querySelector('input[id="quoteEmail"]')?.value || '',
+                            postcode: form.querySelector('input[id="quotePostCode"]')?.value || '',
+                            service: form.querySelector('select[id="quoteService"]')?.value || '',
+                            details: form.querySelector('textarea[id="quoteIssueDetails"]')?.value || ''
+                        };
+                    } else {
+                        console.error("Form ID " + formId + " does not match any known forms.");
+                        return;
+                    }
         
-                            if (formId === 'contactForm') {
-                                params = {
-                                    name: form.querySelector('input[id="contactName"]')?.value || '',
-                                    number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
-                                    email: form.querySelector('input[id="contactEmail"]')?.value || '',
-                                    postcode: form.querySelector('input[id="contactPostCode"]')?.value || '',
-                                    service: form.querySelector('select[id="contactService"]')?.value || '',
-                                    details: form.querySelector('textarea[id="contactIssueDetails"]')?.value || '',
-                                    'g-recaptcha-response': token // Include reCAPTCHA token here
-                                };
-                            } else if (formId === 'bookingForm') {
-                                params = {
-                                    name: form.querySelector('input[id="bookingName"]')?.value || '',
-                                    number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
-                                    email: form.querySelector('input[id="bookingEmail"]')?.value || '',
-                                    postcode: form.querySelector('input[id="bookingPostCode"]')?.value || '',
-                                    service: form.querySelector('select[id="bookingService"]')?.value || '',
-                                    details: form.querySelector('textarea[id="bookingIssueDetails"]')?.value || '',
-                                    'g-recaptcha-response': token // Include reCAPTCHA token here
-                                };
-                            } else if (formId === 'quoteForm') {
-                                params = {
-                                    name: form.querySelector('input[id="quoteName"]')?.value || '',
-                                    number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
-                                    email: form.querySelector('input[id="quoteEmail"]')?.value || '',
-                                    postcode: form.querySelector('input[id="quotePostCode"]')?.value || '',
-                                    service: form.querySelector('select[id="quoteService"]')?.value || '',
-                                    details: form.querySelector('textarea[id="quoteIssueDetails"]')?.value || '',
-                                    'g-recaptcha-response': token // Include reCAPTCHA token here
-                                };
-                            } else {
-                                console.error("Form ID " + formId + " does not match any known forms.");
-                                return;
+                    console.log("Form Data: ", params); // Debugging log
+        
+                    emailjs.send("service_el2g39x", "template_nkryzl2", params)
+                        .then(res => {
+                            // Clear form fields
+                            if (form instanceof HTMLFormElement) {
+                                form.reset();
+                                // Uncheck the checkbox explicitly if present
+                                let checkbox = form.querySelector("input[type='checkbox']");
+                                if (checkbox) checkbox.checked = false;
                             }
         
-                            console.log("Form Data: ", params); // Debugging log
-        
-                            emailjs.send("service_el2g39x", "template_nkryzl2", params)
-                                .then(res => {
-                                    // Clear form fields
-                                    if (form instanceof HTMLFormElement) {
-                                        form.reset();
-                                        // Uncheck the checkbox explicitly if present
-                                        let checkbox = form.querySelector("input[type='checkbox']");
-                                        if (checkbox) checkbox.checked = false;
-                                    }
-        
-                                    // Redirect to success page
-                                    window.location.href = '/success/';
-                                })
-                                .catch((err) => {
-                                    console.log(err);
-                                    // Redirect to failure page
-                                    window.location.href = '/failure/';
-                                });
+                            // Redirect to success page
+                            window.location.href = '/success/';
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                            // Redirect to failure page
+                            window.location.href = '/failure/';
                         });
-                    });
-        
                 } catch (error) {
                     console.error("Error processing form data:", error);
                 }
             }
         </script>
+        
         
    
        
