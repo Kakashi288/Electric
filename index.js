@@ -694,10 +694,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const horizontal = document.querySelector('.horizontal');
     const i1 = document.querySelector('.i1');
     const i2 = document.querySelector('.i2');
-    const i3 = document.querySelector('.i3'); // Added .i3
-    const i4 = document.querySelector('.i4'); // Added .i4
-    const i5 = document.querySelector('.i5'); // Added .i5
-    const i6 = document.querySelector('.i6'); // Added .i6
+    const i3 = document.querySelector('.i3'); 
+    const i4 = document.querySelector('.i4'); 
+    const i5 = document.querySelector('.i5'); 
+    const i6 = document.querySelector('.i6'); 
 
     // Helper function to apply transition styles
     const applyTransitionStyles = (element, opacity, transform, transition) => {
@@ -782,12 +782,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Handle i5 element
         if (i5 && isElementInViewport(i5)) {
-            applyTransitionStyles(i5, 1, 'translateY(0)', 'opacity 1s ease, transform 1.5s ease'); // Added .i5 transition
+            applyTransitionStyles(i5, 1, 'translateY(0)', 'opacity 1s ease, transform 1.5s ease'); 
         }
 
         // Handle i6 element
         if (i6 && isElementInViewport(i6)) {
-            applyTransitionStyles(i6, 1, 'translateX(0)', 'opacity 1s ease, transform 1.5s ease'); // Added .i6 transition
+            applyTransitionStyles(i6, 1, 'translateX(0)', 'opacity 1s ease, transform 1.5s ease'); 
         }
     };
 
@@ -925,7 +925,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Handle i6 element
         if (i6) {
             i6.style.opacity = 0;
-            i6.style.transform = 'translateX(100px)'; // Initial horizontal translation from the right
+            i6.style.transform = 'translateX(-100px)'; // Initial horizontal translation from the right
         }
     };
 
