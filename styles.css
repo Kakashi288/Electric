@@ -1469,7 +1469,7 @@ body.modal-open {
 .booking-form-container {
     background: #f9f9f9; 
     border-radius: 5px; 
-    width: 90%;
+    width: 80%;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -4482,13 +4482,22 @@ body.modal-open {
     width: 100%;
 }
 
-/* .contact-form-group label {
+.contact-form-group label {
     display: block;
     margin-bottom: 5px;
     color: black;
     font-size: 18px;
     font-weight: 400;
-} */
+}
+
+.contact-form-group label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 5px;
+    font-size: 17px;
+    color: black;
+}
+
 
 .contact-form-group input {
     width: 100%;
@@ -4557,14 +4566,6 @@ body.modal-open {
     cursor: pointer;
     margin-bottom: 15px;
     user-select: none;
-}
-
-.contact-form-group label {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 5px;
-    font-size: 17px;
-    color: black;
 }
 
 .response-message {
