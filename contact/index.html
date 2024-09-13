@@ -451,6 +451,7 @@
             try {
                 if (formId === 'contactForm') {
                     params = {
+                        formType: 'Contact Form',
                         name: form.querySelector('input[id="contactName"]')?.value || '',
                         number: form.querySelector('input[id="contactContactNumber"]')?.value || '',
                         email: form.querySelector('input[id="contactEmail"]')?.value || '',
@@ -460,6 +461,7 @@
                     };
                 } else if (formId === 'bookingForm') {
                     params = {
+                        formType: 'Booking Form',
                         name: form.querySelector('input[id="bookingName"]')?.value || '',
                         number: form.querySelector('input[id="bookingContactNumber"]')?.value || '',
                         email: form.querySelector('input[id="bookingEmail"]')?.value || '',
@@ -469,6 +471,7 @@
                     };
                 } else if (formId === 'quoteForm') {
                     params = {
+                        formType: 'Quote Form',
                         name: form.querySelector('input[id="quoteName"]')?.value || '',
                         number: form.querySelector('input[id="quoteContactNumber"]')?.value || '',
                         email: form.querySelector('input[id="quoteEmail"]')?.value || '',
