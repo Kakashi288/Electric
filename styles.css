@@ -5142,7 +5142,7 @@ body.modal-open {
 
 .project-portfolio {
     padding: 60px;
-    margin-top: -20px;
+    margin-top: 20px;
     background-color: #f4f4f4;
     width: 100%;
     display: flex;
