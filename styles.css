@@ -922,6 +922,27 @@ header.sticky {
     background-color: #689e9a; 
 }
 
+@media (max-width: 600px) {
+    .cookie-consent-container {
+        display: grid; 
+        grid-template-rows: auto auto; 
+        grid-template-columns: 1fr; 
+        text-align: left; 
+        gap: 20px; 
+    }
+
+    .cookie-consent-container p {
+        margin: 0;
+        padding-right: 0; 
+    }
+
+    .cookie-consent-button {
+        margin-left: 0; 
+    }
+}
+
+
+
 /* Cookie Settings Modal */
 .cookie-settings-modal {
     display: none; 
